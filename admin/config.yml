@@ -1,0 +1,154 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+
+      - name: "hero"
+        label: "👋 Hero Section"
+        file: "_data/content.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Your Name", name: "name", widget: "string" }
+              - { label: "Job Title / Role", name: "role", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Bio Paragraph", name: "bio", widget: "text" }
+              - { label: "Stat 1 – Number", name: "stat_1_num", widget: "string" }
+              - { label: "Stat 1 – Label", name: "stat_1_label", widget: "string" }
+              - { label: "Stat 2 – Number", name: "stat_2_num", widget: "string" }
+              - { label: "Stat 2 – Label", name: "stat_2_label", widget: "string" }
+              - { label: "Stat 3 – Number", name: "stat_3_num", widget: "string" }
+              - { label: "Stat 3 – Label", name: "stat_3_label", widget: "string" }
+          - label: "Projects"
+            name: "projects"
+            widget: "object"
+            fields:
+              - { label: "Section Subtitle", name: "section_sub", widget: "string" }
+              - { label: "Media Trip – Title", name: "media_title", widget: "string" }
+              - { label: "Media Trip – Description", name: "media_desc", widget: "text" }
+              - { label: "Media Trip – Stat 1 Number", name: "media_stat_1_num", widget: "string" }
+              - { label: "Media Trip – Stat 1 Label", name: "media_stat_1_label", widget: "string" }
+              - { label: "Media Trip – Stat 2 Number", name: "media_stat_2_num", widget: "string" }
+              - { label: "Media Trip – Stat 2 Label", name: "media_stat_2_label", widget: "string" }
+              - { label: "Platform Management – Title", name: "platform_title", widget: "string" }
+              - { label: "Platform Management – Description", name: "platform_desc", widget: "text" }
+              - { label: "Platform Management – Stat 1 Number", name: "platform_stat_1_num", widget: "string" }
+              - { label: "Platform Management – Stat 1 Label", name: "platform_stat_1_label", widget: "string" }
+              - { label: "Platform Management – Stat 2 Number", name: "platform_stat_2_num", widget: "string" }
+              - { label: "Platform Management – Stat 2 Label", name: "platform_stat_2_label", widget: "string" }
+              - { label: "Editorial – Title", name: "editorial_title", widget: "string" }
+              - { label: "Editorial – Description", name: "editorial_desc", widget: "text" }
+              - { label: "Editorial – Stat 1 Number", name: "editorial_stat_1_num", widget: "string" }
+              - { label: "Editorial – Stat 1 Label", name: "editorial_stat_1_label", widget: "string" }
+              - { label: "Editorial – Stat 2 Number", name: "editorial_stat_2_num", widget: "string" }
+              - { label: "Editorial – Stat 2 Label", name: "editorial_stat_2_label", widget: "string" }
+              - { label: "Rwanda Supplement – Card Title", name: "rwanda_card_title", widget: "string" }
+              - { label: "Rwanda Supplement – Card Description", name: "rwanda_card_desc", widget: "text" }
+              - { label: "Georgetown – Card Title", name: "georgetown_card_title", widget: "string" }
+              - { label: "Georgetown – Card Description", name: "georgetown_card_desc", widget: "text" }
+              - { label: "Photography – Title", name: "photo_title", widget: "string" }
+              - { label: "Photography – Description", name: "photo_desc", widget: "text" }
+              - { label: "Photography – Stat 1 Number", name: "photo_stat_1_num", widget: "string" }
+              - { label: "Photography – Stat 1 Label", name: "photo_stat_1_label", widget: "string" }
+              - { label: "Photography – Stat 2 Number", name: "photo_stat_2_num", widget: "string" }
+              - { label: "Photography – Stat 2 Label", name: "photo_stat_2_label", widget: "string" }
+              - { label: "Graphics – Title", name: "graphics_title", widget: "string" }
+              - { label: "Graphics – Description", name: "graphics_desc", widget: "text" }
+              - { label: "Graphics – Stat 1 Number", name: "graphics_stat_1_num", widget: "string" }
+              - { label: "Graphics – Stat 1 Label", name: "graphics_stat_1_label", widget: "string" }
+          - label: "Career Journey"
+            name: "journey"
+            widget: "object"
+            fields:
+              - { label: "Section Subtitle", name: "section_sub", widget: "string" }
+              - { label: "Job 1 – Dates", name: "job_1_date", widget: "string" }
+              - { label: "Job 1 – Role", name: "job_1_role", widget: "string" }
+              - { label: "Job 1 – Organisation", name: "job_1_org", widget: "string" }
+              - { label: "Job 1 – Description", name: "job_1_desc", widget: "text" }
+              - { label: "Job 2 – Dates", name: "job_2_date", widget: "string" }
+              - { label: "Job 2 – Role", name: "job_2_role", widget: "string" }
+              - { label: "Job 2 – Organisation", name: "job_2_org", widget: "string" }
+              - { label: "Job 2 – Description", name: "job_2_desc", widget: "text" }
+              - { label: "Job 3 – Dates", name: "job_3_date", widget: "string" }
+              - { label: "Job 3 – Role", name: "job_3_role", widget: "string" }
+              - { label: "Job 3 – Organisation", name: "job_3_org", widget: "string" }
+              - { label: "Job 3 – Description", name: "job_3_desc", widget: "text" }
+              - { label: "Job 4 – Dates", name: "job_4_date", widget: "string" }
+              - { label: "Job 4 – Role", name: "job_4_role", widget: "string" }
+              - { label: "Job 4 – Organisation", name: "job_4_org", widget: "string" }
+              - { label: "Job 4 – Description", name: "job_4_desc", widget: "text" }
+              - { label: "Job 5 – Dates", name: "job_5_date", widget: "string" }
+              - { label: "Job 5 – Role", name: "job_5_role", widget: "string" }
+              - { label: "Job 5 – Organisation", name: "job_5_org", widget: "string" }
+              - { label: "Job 5 – Description", name: "job_5_desc", widget: "text" }
+              - { label: "Job 6 – Dates", name: "job_6_date", widget: "string" }
+              - { label: "Job 6 – Role", name: "job_6_role", widget: "string" }
+              - { label: "Job 6 – Organisation", name: "job_6_org", widget: "string" }
+              - { label: "Job 6 – Description", name: "job_6_desc", widget: "text" }
+              - { label: "Job 7 – Dates", name: "job_7_date", widget: "string" }
+              - { label: "Job 7 – Role", name: "job_7_role", widget: "string" }
+              - { label: "Job 7 – Organisation", name: "job_7_org", widget: "string" }
+              - { label: "Job 7 – Description", name: "job_7_desc", widget: "text" }
+          - label: "Education"
+            name: "education"
+            widget: "object"
+            fields:
+              - { label: "Section Subtitle", name: "section_sub", widget: "string" }
+              - { label: "Degree 1 – Years", name: "deg_1_year", widget: "string" }
+              - { label: "Degree 1 – Title", name: "deg_1_title", widget: "string" }
+              - { label: "Degree 1 – School", name: "deg_1_school", widget: "string" }
+              - { label: "Degree 2 – Years", name: "deg_2_year", widget: "string" }
+              - { label: "Degree 2 – Title", name: "deg_2_title", widget: "string" }
+              - { label: "Degree 2 – School", name: "deg_2_school", widget: "string" }
+              - { label: "Degree 3 – Years", name: "deg_3_year", widget: "string" }
+              - { label: "Degree 3 – Title", name: "deg_3_title", widget: "string" }
+              - { label: "Degree 3 – School", name: "deg_3_school", widget: "string" }
+              - { label: "Degree 4 – Years", name: "deg_4_year", widget: "string" }
+              - { label: "Degree 4 – Title", name: "deg_4_title", widget: "string" }
+              - { label: "Degree 4 – School", name: "deg_4_school", widget: "string" }
+          - label: "Beyond Work"
+            name: "beyond"
+            widget: "object"
+            fields:
+              - { label: "Speaking Circle – Description", name: "speaking_desc", widget: "text" }
+              - { label: "Cooking – Description", name: "cooking_desc", widget: "text" }
+              - { label: "Volunteering – Description", name: "volunteering_desc", widget: "text" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Quote", name: "quote", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+              - { label: "Website URL", name: "website", widget: "string" }
+
+      - name: "images"
+        label: "🖼️ Images"
+        file: "_data/content.json"
+        fields:
+          - label: "Images"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Portrait Photo", name: "portrait", widget: "image", default: "/images/img_00.png" }
+              - { label: "Media Trip Photo", name: "media_trip", widget: "image", default: "/images/img_02.jpeg" }
+              - { label: "Platform / Website Screenshot", name: "platform", widget: "image", default: "/images/img_01.png" }
+              - { label: "Rwanda Supplement Cover", name: "rwanda_supplement", widget: "image", default: "/images/img_03.png" }
+              - { label: "Georgetown Feature", name: "georgetown", widget: "image", default: "/images/img_04.png" }
+              - { label: "Event Photo 1", name: "event_1", widget: "image", default: "/images/img_05.jpeg" }
+              - { label: "Event Photo 2", name: "event_2", widget: "image", default: "/images/img_06.jpeg" }
+              - { label: "Event Photo 3", name: "event_3", widget: "image", default: "/images/img_07.jpeg" }
+              - { label: "Event Photo 4", name: "event_4", widget: "image", default: "/images/img_08.jpeg" }
+              - { label: "Graphic 1", name: "graphic_1", widget: "image", default: "/images/img_09.jpeg" }
+              - { label: "Graphic 2", name: "graphic_2", widget: "image", default: "/images/img_10.jpeg" }
+              - { label: "Graphic 3", name: "graphic_3", widget: "image", default: "/images/img_11.jpeg" }

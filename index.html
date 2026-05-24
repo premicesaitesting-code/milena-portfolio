@@ -8,10 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Netlify Identity for CMS login -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
-  <!-- BACKGROUND ORBS -->
   <div class="orb orb--1" aria-hidden="true"></div>
   <div class="orb orb--2" aria-hidden="true"></div>
   <div class="orb orb--3" aria-hidden="true"></div>
@@ -39,21 +40,20 @@
       <div class="hero__badges">
         <span class="badge badge--location">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          Embassy of Rwanda, Doha
+          <span data-cms="hero.location">Embassy of Rwanda, Doha</span>
         </span>
       </div>
-      <h1 class="hero__heading">Hello, I'm <em>Milena!</em></h1>
-      <p class="hero__role">Strategic Communications &amp; Project Management Specialist</p>
-      <p class="hero__sub">Communications professional specializing in strategic storytelling, multimedia content, public relations, and institutional communications across diplomacy, higher education institutions, and cultural sectors.</p>
+      <h1 class="hero__heading">Hello, I'm <em data-cms="hero.name">Milena!</em></h1>
+      <p class="hero__role" data-cms="hero.role">Strategic Communications &amp; Project Management Specialist</p>
+      <p class="hero__sub" data-cms="hero.bio">Communications professional specializing in strategic storytelling, multimedia content, public relations, and institutional communications across diplomacy, higher education institutions, and cultural sectors.</p>
       <div class="hero__actions">
         <a href="#contact" class="btn btn--primary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           Say Hello
         </a>
-        <a href="mailto:milena.kaligirwa@gmail.com" class="btn btn--outline">Request Resume</a>
+        <a href="#" class="btn btn--outline" id="resume-btn">Request Resume</a>
       </div>
     </div>
-
     <div class="hero__visual">
       <div class="hero__photo-wrap">
         <img src="images/img_00.png" alt="Milena Kaligirwa" class="hero__photo" />
@@ -64,16 +64,16 @@
       </div>
       <div class="hero__stats">
         <div class="stat">
-          <span class="stat__num">3+</span>
-          <span class="stat__label">years of experience</span>
+          <span class="stat__num" data-cms="hero.stat_1_num">3+</span>
+          <span class="stat__label" data-cms="hero.stat_1_label">years of experience</span>
         </div>
         <div class="stat">
-          <span class="stat__num">500%</span>
-          <span class="stat__label">reach growth</span>
+          <span class="stat__num" data-cms="hero.stat_2_num">500%</span>
+          <span class="stat__label" data-cms="hero.stat_2_label">reach growth</span>
         </div>
         <div class="stat">
-          <span class="stat__num">26</span>
-          <span class="stat__label">intl. media coverages</span>
+          <span class="stat__num" data-cms="hero.stat_3_num">26</span>
+          <span class="stat__label" data-cms="hero.stat_3_label">intl. media coverages</span>
         </div>
       </div>
     </div>
@@ -111,10 +111,9 @@
       <div class="section__header">
         <p class="section__label">Selected Work</p>
         <h2 class="section__title">Featured Projects</h2>
-        <p class="section__sub">Campaigns, platforms, and stories that moved the needle — in diplomacy, media, and beyond.</p>
+        <p class="section__sub" data-cms="projects.section_sub">Campaigns, platforms, and stories that moved the needle — in diplomacy, media, and beyond.</p>
       </div>
 
-      <!-- Project 1 – Media Trip -->
       <article class="project project--feature project--media">
         <div class="project__image">
           <img src="images/img_02.jpeg" alt="Media Familiarization Trip in Rwanda" />
@@ -127,22 +126,21 @@
           </div>
         </div>
         <div class="project__text">
-          <h3 class="project__title">Media Familiarization Trip</h3>
-          <p class="project__desc">Rwanda's story was often told through outdated lenses. I conceptualized and led a flagship initiative inviting Qatari and regional journalists to experience Rwanda firsthand, shifting narratives toward innovation, tourism, and development.</p>
+          <h3 class="project__title" data-cms="projects.media_title">Media Familiarization Trip</h3>
+          <p class="project__desc" data-cms="projects.media_desc">Rwanda's story was often told through outdated lenses. I conceptualized and led a flagship initiative inviting Qatari and regional journalists to experience Rwanda firsthand, shifting narratives toward innovation, tourism, and development.</p>
           <div class="project__stats">
             <div class="pstat">
-              <span class="pstat__num">26</span>
-              <span class="pstat__label">media coverages generated</span>
+              <span class="pstat__num" data-cms="projects.media_stat_1_num">26</span>
+              <span class="pstat__label" data-cms="projects.media_stat_1_label">media coverages generated</span>
             </div>
             <div class="pstat">
-              <span class="pstat__num">6+</span>
-              <span class="pstat__label">major Qatari outlets</span>
+              <span class="pstat__num" data-cms="projects.media_stat_2_num">6+</span>
+              <span class="pstat__label" data-cms="projects.media_stat_2_label">major Qatari outlets</span>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- Project 2 – Platform Management -->
       <article class="project project--feature project--digital project--flip">
         <div class="project__image">
           <img src="images/img_01.png" alt="Rwanda in Qatar website" />
@@ -155,22 +153,21 @@
           </div>
         </div>
         <div class="project__text">
-          <h3 class="project__title">Platform Management</h3>
-          <p class="project__desc">Built an organization's entire digital presence: website, Twitter (X), LinkedIn, and Instagram, using a three-pillar strategy: authentic storytelling, cultural relevance, and data-driven content.</p>
+          <h3 class="project__title" data-cms="projects.platform_title">Platform Management</h3>
+          <p class="project__desc" data-cms="projects.platform_desc">Built an organization's entire digital presence: website, Twitter (X), LinkedIn, and Instagram, using a three-pillar strategy: authentic storytelling, cultural relevance, and data-driven content.</p>
           <div class="project__stats">
             <div class="pstat">
-              <span class="pstat__num">500%</span>
-              <span class="pstat__label">reach growth</span>
+              <span class="pstat__num" data-cms="projects.platform_stat_1_num">500%</span>
+              <span class="pstat__label" data-cms="projects.platform_stat_1_label">reach growth</span>
             </div>
             <div class="pstat">
-              <span class="pstat__num">$0</span>
-              <span class="pstat__label">ad spend</span>
+              <span class="pstat__num" data-cms="projects.platform_stat_2_num">$0</span>
+              <span class="pstat__label" data-cms="projects.platform_stat_2_label">ad spend</span>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- Project 3 – Editorial -->
       <article class="project project--editorial">
         <div class="project__editorial-top">
           <div class="project__meta-tags">
@@ -178,60 +175,54 @@
             <span class="tag">Editorial</span>
             <span class="tag">Institutional Communications</span>
           </div>
-          <h3 class="project__title">Editorial &amp; Institutional Writing</h3>
-          <p class="project__desc">Developed written content including proposals, speeches, press releases, institutional articles, and campaign content in collaboration with universities, media outlets, and partner organizations.</p>
+          <h3 class="project__title" data-cms="projects.editorial_title">Editorial &amp; Institutional Writing</h3>
+          <p class="project__desc" data-cms="projects.editorial_desc">Developed written content including proposals, speeches, press releases, institutional articles, and campaign content in collaboration with universities, media outlets, and partner organizations.</p>
           <div class="project__stats">
             <div class="pstat">
-              <span class="pstat__num">20+</span>
-              <span class="pstat__label">Press releases</span>
+              <span class="pstat__num" data-cms="projects.editorial_stat_1_num">20+</span>
+              <span class="pstat__label" data-cms="projects.editorial_stat_1_label">Press releases</span>
             </div>
             <div class="pstat">
-              <span class="pstat__num">12</span>
-              <span class="pstat__label">international media coverages</span>
+              <span class="pstat__num" data-cms="projects.editorial_stat_2_num">12</span>
+              <span class="pstat__label" data-cms="projects.editorial_stat_2_label">international media coverages</span>
             </div>
           </div>
         </div>
         <div class="editorial__cards">
           <div class="editorial__card">
-            <div class="editorial__card-img">
-              <img src="images/img_03.png" alt="Rwanda Special Supplement – Gulf Times" />
-            </div>
+            <div class="editorial__card-img"><img src="images/img_03.png" alt="Rwanda Special Supplement" /></div>
             <div class="editorial__card-body">
-              <h4>Rwanda Special Supplement – Gulf Times</h4>
-              <p>Developed editorial content and coordinated materials for a Rwanda-focused special supplement.</p>
+              <h4 data-cms="projects.rwanda_card_title">Rwanda Special Supplement – Gulf Times</h4>
+              <p data-cms="projects.rwanda_card_desc">Developed editorial content and coordinated materials for a Rwanda-focused special supplement.</p>
             </div>
           </div>
           <div class="editorial__card">
-            <div class="editorial__card-img">
-              <img src="images/img_04.png" alt="Georgetown University Qatar – Rwanda Student Visit Feature" />
-            </div>
+            <div class="editorial__card-img"><img src="images/img_04.png" alt="Georgetown University Qatar Feature" /></div>
             <div class="editorial__card-body">
-              <h4>Georgetown University Qatar – Rwanda Student Visit Feature</h4>
-              <p>Supported the development of a feature story on students' visit to Rwanda in collaboration with Georgetown University in Qatar.</p>
+              <h4 data-cms="projects.georgetown_card_title">Georgetown University Qatar – Rwanda Student Visit Feature</h4>
+              <p data-cms="projects.georgetown_card_desc">Supported the development of a feature story on students' visit to Rwanda in collaboration with Georgetown University in Qatar.</p>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- Projects row: Photography + Graphics -->
       <div class="projects__row">
-
         <article class="project project--card project--photo">
           <div class="project__card-header">
             <div class="project__meta-tags">
               <span class="tag">Visual Documentation</span>
               <span class="tag">Photography</span>
             </div>
-            <h3 class="project__title">Event Photography</h3>
-            <p class="project__desc">Visual documentation during MoU signings, high-level meetings, and diplomatic functions — professional, platform-ready images that support institutional storytelling.</p>
+            <h3 class="project__title" data-cms="projects.photo_title">Event Photography</h3>
+            <p class="project__desc" data-cms="projects.photo_desc">Visual documentation during MoU signings, high-level meetings, and diplomatic functions — professional, platform-ready images that support institutional storytelling.</p>
             <div class="project__stats">
               <div class="pstat">
-                <span class="pstat__num">50+</span>
-                <span class="pstat__label">Events covered</span>
+                <span class="pstat__num" data-cms="projects.photo_stat_1_num">50+</span>
+                <span class="pstat__label" data-cms="projects.photo_stat_1_label">Events covered</span>
               </div>
               <div class="pstat">
-                <span class="pstat__num">6+</span>
-                <span class="pstat__label">Years of experience</span>
+                <span class="pstat__num" data-cms="projects.photo_stat_2_num">6+</span>
+                <span class="pstat__label" data-cms="projects.photo_stat_2_label">Years of experience</span>
               </div>
             </div>
           </div>
@@ -249,12 +240,12 @@
               <span class="tag">Visual Design</span>
               <span class="tag">Brand Identity</span>
             </div>
-            <h3 class="project__title">Graphics &amp; Visual Storytelling</h3>
-            <p class="project__desc">Custom graphics and visual assets using Canva and Adobe Illustrator, tailored to cultural celebrations, elections, and institutional public awareness campaigns.</p>
+            <h3 class="project__title" data-cms="projects.graphics_title">Graphics &amp; Visual Storytelling</h3>
+            <p class="project__desc" data-cms="projects.graphics_desc">Custom graphics and visual assets using Canva and Adobe Illustrator, tailored to cultural celebrations, elections, and institutional public awareness campaigns.</p>
             <div class="project__stats">
               <div class="pstat">
-                <span class="pstat__num">30+</span>
-                <span class="pstat__label">graphics per month</span>
+                <span class="pstat__num" data-cms="projects.graphics_stat_1_num">30+</span>
+                <span class="pstat__label" data-cms="projects.graphics_stat_1_label">graphics per month</span>
               </div>
             </div>
           </div>
@@ -264,7 +255,6 @@
             <div class="graphics__cell"><img src="images/img_11.jpeg" alt="Rwanda Pavilion Expo 2023" /></div>
           </div>
         </article>
-
       </div>
     </div>
   </section>
@@ -275,81 +265,72 @@
       <div class="section__header">
         <p class="section__label">Experience</p>
         <h2 class="section__title">Career Journey</h2>
-        <p class="section__sub">Institutions that trust me to tell their stories — diplomacy, higher education, and creative industries, across Qatar and beyond.</p>
+        <p class="section__sub" data-cms="journey.section_sub">Institutions that trust me to tell their stories — diplomacy, higher education, and creative industries, across Qatar and beyond.</p>
       </div>
-
       <div class="timeline">
-
         <div class="timeline__item timeline__item--active">
           <div class="timeline__dot"></div>
           <div class="timeline__card">
-            <span class="timeline__date">JUN 2023 – PRESENT</span>
-            <h3 class="timeline__role">Communications Officer</h3>
-            <p class="timeline__org">Embassy of the Republic of Rwanda to the State of Qatar</p>
-            <p class="timeline__desc">Lead strategic communications and cultural diplomacy initiatives while managing public-facing projects, international events and exhibitions, and stakeholder relations.</p>
+            <span class="timeline__date" data-cms="journey.job_1_date">JUN 2023 – PRESENT</span>
+            <h3 class="timeline__role" data-cms="journey.job_1_role">Communications Officer</h3>
+            <p class="timeline__org" data-cms="journey.job_1_org">Embassy of the Republic of Rwanda to the State of Qatar</p>
+            <p class="timeline__desc" data-cms="journey.job_1_desc">Lead strategic communications and cultural diplomacy initiatives while managing public-facing projects, international events and exhibitions, and stakeholder relations.</p>
           </div>
         </div>
-
         <div class="timeline__item">
           <div class="timeline__dot"></div>
           <div class="timeline__card">
-            <span class="timeline__date">AUG 2025 – OCT 2025</span>
-            <h3 class="timeline__role">Acting Executive Assistant to the Ambassador <em>(Interim)</em></h3>
-            <p class="timeline__org">Embassy of the Republic of Rwanda to the State of Qatar</p>
-            <p class="timeline__desc">Supported diplomatic coordination, institutional communication, and administrative workflow during high-level engagements and events.</p>
+            <span class="timeline__date" data-cms="journey.job_2_date">AUG 2025 – OCT 2025</span>
+            <h3 class="timeline__role" data-cms="journey.job_2_role">Acting Executive Assistant to the Ambassador (Interim)</h3>
+            <p class="timeline__org" data-cms="journey.job_2_org">Embassy of the Republic of Rwanda to the State of Qatar</p>
+            <p class="timeline__desc" data-cms="journey.job_2_desc">Supported diplomatic coordination, institutional communication, and administrative workflow during high-level engagements and events.</p>
           </div>
         </div>
-
         <div class="timeline__item">
           <div class="timeline__dot"></div>
           <div class="timeline__card">
-            <span class="timeline__date">NOV 2022 – MAR 2023</span>
-            <h3 class="timeline__role">Public Relations Assistant Intern</h3>
-            <p class="timeline__org">U.S. Embassy in Doha</p>
-            <p class="timeline__desc">Assisted with public diplomacy initiatives, event support, and development of communication materials for outreach programs.</p>
+            <span class="timeline__date" data-cms="journey.job_3_date">NOV 2022 – MAR 2023</span>
+            <h3 class="timeline__role" data-cms="journey.job_3_role">Public Relations Assistant Intern</h3>
+            <p class="timeline__org" data-cms="journey.job_3_org">U.S. Embassy in Doha</p>
+            <p class="timeline__desc" data-cms="journey.job_3_desc">Assisted with public diplomacy initiatives, event support, and development of communication materials for outreach programs.</p>
           </div>
         </div>
-
         <div class="timeline__item">
           <div class="timeline__dot"></div>
           <div class="timeline__card">
-            <span class="timeline__date">JUN 2022 – OCT 2022</span>
-            <h3 class="timeline__role">Multimedia Assistant Intern</h3>
-            <p class="timeline__org">Qatar Foundation</p>
-            <p class="timeline__desc">Supported multimedia storytelling, content production, and communication projects focused on youth and institutional programs.</p>
+            <span class="timeline__date" data-cms="journey.job_4_date">JUN 2022 – OCT 2022</span>
+            <h3 class="timeline__role" data-cms="journey.job_4_role">Multimedia Assistant Intern</h3>
+            <p class="timeline__org" data-cms="journey.job_4_org">Qatar Foundation</p>
+            <p class="timeline__desc" data-cms="journey.job_4_desc">Supported multimedia storytelling, content production, and communication projects focused on youth and institutional programs.</p>
           </div>
         </div>
-
         <div class="timeline__item">
           <div class="timeline__dot"></div>
           <div class="timeline__card">
-            <span class="timeline__date">MAY 2021 – APR 2022</span>
-            <h3 class="timeline__role">Social Media Chair</h3>
-            <p class="timeline__org">Studio 20Q, Northwestern University Qatar</p>
-            <p class="timeline__desc">Managed social media content and digital campaigns for student-led media projects and events.</p>
+            <span class="timeline__date" data-cms="journey.job_5_date">MAY 2021 – APR 2022</span>
+            <h3 class="timeline__role" data-cms="journey.job_5_role">Social Media Chair</h3>
+            <p class="timeline__org" data-cms="journey.job_5_org">Studio 20Q, Northwestern University Qatar</p>
+            <p class="timeline__desc" data-cms="journey.job_5_desc">Managed social media content and digital campaigns for student-led media projects and events.</p>
           </div>
         </div>
-
         <div class="timeline__item">
           <div class="timeline__dot"></div>
           <div class="timeline__card">
-            <span class="timeline__date">JUN 2020 – AUG 2020</span>
-            <h3 class="timeline__role">Digital Communications Intern</h3>
-            <p class="timeline__org">GWC Logistics</p>
-            <p class="timeline__desc">Assisted in digital content creation and marketing communications across multiple platforms.</p>
+            <span class="timeline__date" data-cms="journey.job_6_date">JUN 2020 – AUG 2020</span>
+            <h3 class="timeline__role" data-cms="journey.job_6_role">Digital Communications Intern</h3>
+            <p class="timeline__org" data-cms="journey.job_6_org">GWC Logistics</p>
+            <p class="timeline__desc" data-cms="journey.job_6_desc">Assisted in digital content creation and marketing communications across multiple platforms.</p>
           </div>
         </div>
-
         <div class="timeline__item">
           <div class="timeline__dot"></div>
           <div class="timeline__card">
-            <span class="timeline__date">OCT 2019 – MAY 2022</span>
-            <h3 class="timeline__role">Student Office Assistant</h3>
-            <p class="timeline__org">Northwestern University in Qatar</p>
-            <p class="timeline__desc">Supported student services, communications, and event coordination within the Student Affairs department.</p>
+            <span class="timeline__date" data-cms="journey.job_7_date">OCT 2019 – MAY 2022</span>
+            <h3 class="timeline__role" data-cms="journey.job_7_role">Student Office Assistant</h3>
+            <p class="timeline__org" data-cms="journey.job_7_org">Northwestern University in Qatar</p>
+            <p class="timeline__desc" data-cms="journey.job_7_desc">Supported student services, communications, and event coordination within the Student Affairs department.</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -360,37 +341,34 @@
       <div class="section__header">
         <p class="section__label">Academic Background</p>
         <h2 class="section__title">My Education</h2>
-        <p class="section__sub">Across Education City universities — advanced skills in communication, social media, and digital storytelling in a richly multicultural environment.</p>
+        <p class="section__sub" data-cms="education.section_sub">Across Education City universities — advanced skills in communication, social media, and digital storytelling in a richly multicultural environment.</p>
       </div>
-
       <div class="edu__grid">
         <div class="edu__card edu__card--masters">
           <span class="edu__badge">Master's</span>
-          <span class="edu__year">2024 – 2025</span>
-          <h3 class="edu__degree">Master of Arts in Digital Humanities and Societies</h3>
-          <p class="edu__school">Hamad Bin Khalifa University</p>
+          <span class="edu__year" data-cms="education.deg_1_year">2024 – 2025</span>
+          <h3 class="edu__degree" data-cms="education.deg_1_title">Master of Arts in Digital Humanities and Societies</h3>
+          <p class="edu__school" data-cms="education.deg_1_school">Hamad Bin Khalifa University</p>
         </div>
         <div class="edu__card edu__card--bachelors">
           <span class="edu__badge">Bachelor's</span>
-          <span class="edu__year">2019 – 2023</span>
-          <h3 class="edu__degree">BS in Communication, Major in Media Industries &amp; Technology</h3>
-          <p class="edu__school">Northwestern University in Qatar</p>
+          <span class="edu__year" data-cms="education.deg_2_year">2019 – 2023</span>
+          <h3 class="edu__degree" data-cms="education.deg_2_title">BS in Communication, Major in Media Industries &amp; Technology</h3>
+          <p class="edu__school" data-cms="education.deg_2_school">Northwestern University in Qatar</p>
         </div>
         <div class="edu__card edu__card--minor">
           <span class="edu__badge">Minor</span>
-          <span class="edu__year">2020 – 2023</span>
-          <h3 class="edu__degree">Minor in Media and Politics</h3>
-          <p class="edu__school">NU-Q in collaboration with Georgetown University – Qatar</p>
+          <span class="edu__year" data-cms="education.deg_3_year">2020 – 2023</span>
+          <h3 class="edu__degree" data-cms="education.deg_3_title">Minor in Media and Politics</h3>
+          <p class="edu__school" data-cms="education.deg_3_school">NU-Q in collaboration with Georgetown University – Qatar</p>
         </div>
         <div class="edu__card edu__card--cert">
           <span class="edu__badge">Certificate</span>
-          <span class="edu__year">2020 – 2023</span>
-          <h3 class="edu__degree">Strategic Communication Certificate</h3>
-          <p class="edu__school">Northwestern University – Qatar</p>
+          <span class="edu__year" data-cms="education.deg_4_year">2020 – 2023</span>
+          <h3 class="edu__degree" data-cms="education.deg_4_title">Strategic Communication Certificate</h3>
+          <p class="edu__school" data-cms="education.deg_4_school">Northwestern University – Qatar</p>
         </div>
       </div>
-
-      <!-- Tools -->
       <div class="tools">
         <p class="section__label" style="margin-bottom:16px">Toolkit</p>
         <h3 class="tools__title">Tools &amp; Platforms</h3>
@@ -420,39 +398,25 @@
         <h2 class="section__title">Outside of Work</h2>
         <p class="section__sub">You will find me…</p>
       </div>
-
       <div class="beyond__grid">
         <div class="beyond__card beyond__card--speaking">
-          <div class="beyond__logo">
-            <img src="images/img_25.png" alt="The Speaking Circle" />
-          </div>
+          <div class="beyond__logo"><img src="images/img_25.png" alt="The Speaking Circle" /></div>
           <h3>The Speaking Circle</h3>
-          <p>Co-founded a public speaking community that organizes workshops, events, and The Speaking Circle podcast.</p>
+          <p data-cms="beyond.speaking_desc">Co-founded a public speaking community that organizes workshops, events, and The Speaking Circle podcast.</p>
         </div>
-
         <div class="beyond__card beyond__card--cooking">
           <div class="beyond__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 28 C16 20 48 20 48 28 L46 50 H18 Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
-              <path d="M24 28 C24 18 24 14 28 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M32 28 C32 18 32 14 32 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M40 28 C40 18 40 14 36 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            </svg>
+            <svg viewBox="0 0 64 64" fill="none"><path d="M16 28 C16 20 48 20 48 28 L46 50 H18 Z" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M24 28 C24 18 24 14 28 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M32 28 C32 18 32 14 32 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M40 28 C40 18 40 14 36 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
           </div>
           <h3>Cooking</h3>
-          <p>When I'm not crafting messages, I'm mixing flavors. Cooking is my hobby, my therapy, and my favourite way to communicate.</p>
+          <p data-cms="beyond.cooking_desc">When I'm not crafting messages, I'm mixing flavors. Cooking is my hobby, my therapy, and my favourite way to communicate.</p>
         </div>
-
         <div class="beyond__card beyond__card--volunteering">
           <div class="beyond__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 12 C32 12 20 18 20 28 C20 34 25 38 32 38 C39 38 44 34 44 28 C44 18 32 12 32 12Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
-              <path d="M20 44 C20 44 14 46 12 52 L52 52 C50 46 44 44 44 44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M26 28 L30 32 L38 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <svg viewBox="0 0 64 64" fill="none"><path d="M32 12 C32 12 20 18 20 28 C20 34 25 38 32 38 C39 38 44 34 44 28 C44 18 32 12 32 12Z" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M20 44 C20 44 14 46 12 52 L52 52 C50 46 44 44 44 44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M26 28 L30 32 L38 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3>Volunteering</h3>
-          <p>Because someone opened the door for me, I make sure it stays open for those behind me through giving back to the community.</p>
+          <p data-cms="beyond.volunteering_desc">Because someone opened the door for me, I make sure it stays open for those behind me through giving back to the community.</p>
         </div>
       </div>
     </div>
@@ -464,21 +428,21 @@
       <div class="contact__inner">
         <p class="section__label contact__label">Get in Touch</p>
         <h2 class="contact__title">Let's Connect</h2>
-        <p class="contact__quote">"I would love to hear about your experience and how we can work together."</p>
+        <p class="contact__quote" data-cms="contact.quote">"I would love to hear about your experience and how we can work together."</p>
         <div class="contact__links">
-          <a href="mailto:milena.kaligirwa@gmail.com" class="contact__link">
+          <a class="contact__link" id="contact-email">
             <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M2 8 L12 14 L22 8" stroke="currentColor" stroke-width="1.8"/></svg>
-            milena.kaligirwa@gmail.com
+            <span data-cms="contact.email">milena.kaligirwa@gmail.com</span>
           </a>
-          <a href="tel:+97450200376" class="contact__link">
+          <a class="contact__link" id="contact-phone">
             <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8C7.8 13.2 9.8 15.2 12.2 16.4L14 14.6C14.2 14.4 14.6 14.4 14.9 14.5C15.9 14.8 17 15 18 15C18.6 15 19 15.4 19 16V18C19 18.6 18.6 19 18 19C10.8 19 5 13.2 5 6C5 5.4 5.4 5 6 5H8C8.6 5 9 5.4 9 6C9 7 9.2 8 9.5 9C9.6 9.4 9.5 9.8 9.3 10L7.4 11.9C7.2 11.6 6.9 11.2 6.6 10.8Z" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
-            +974 50200376
+            <span data-cms="contact.phone">+974 50200376</span>
           </a>
-          <a href="https://www.linkedin.com/in/milena-jessy-/" target="_blank" rel="noopener" class="contact__link">
+          <a class="contact__link" id="contact-linkedin" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 10V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="7" cy="7" r="1" fill="currentColor"/><path d="M11 17V13C11 11.3 12.3 10 14 10C15.7 10 17 11.3 17 13V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11 10V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             linkedin.com/in/milena-jessy-/
           </a>
-          <a href="https://www.milenakaligirwa.com" target="_blank" rel="noopener" class="contact__link">
+          <a class="contact__link" id="contact-website" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 3C12 3 9 7 9 12C9 17 12 21 12 21" stroke="currentColor" stroke-width="1.8"/><path d="M12 3C12 3 15 7 15 12C15 17 12 21 12 21" stroke="currentColor" stroke-width="1.8"/><path d="M3 12H21" stroke="currentColor" stroke-width="1.8"/></svg>
             milenakaligirwa.com
           </a>
@@ -488,5 +452,15 @@
   </section>
 
   <script src="script.js"></script>
+  <!-- Netlify Identity redirect for CMS -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
