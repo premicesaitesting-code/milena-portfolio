@@ -216,13 +216,20 @@ img { display: block; max-width: 100%; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.hero__role-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
 .hero__role {
   font-size: .85rem;
   font-weight: 600;
   letter-spacing: .04em;
   color: var(--purple);
-  margin-bottom: 18px;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 .hero__sub {
   font-size: 1.05rem;
