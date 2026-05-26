@@ -13,90 +13,150 @@
   },
   "projects": {
     "section_sub": "Campaigns, platforms, and stories that moved the needle — in diplomacy, media, and beyond.",
-    "media_title": "Media Familiarization Trip",
-    "media_desc": "Rwanda's story was often told through outdated lenses. I conceptualized and led a flagship initiative inviting Qatari and regional journalists to experience Rwanda firsthand, shifting narratives toward innovation, tourism, and development.",
-    "media_stat_1_num": "26",
-    "media_stat_1_label": "media coverages generated",
-    "media_stat_2_num": "6+",
-    "media_stat_2_label": "major Qatari outlets",
-    "platform_title": "Platform Management",
-    "platform_desc": "Built an organization's entire digital presence: website, Twitter (X), LinkedIn, and Instagram, using a three-pillar strategy: authentic storytelling, cultural relevance, and data-driven content.",
-    "platform_stat_1_num": "500%",
-    "platform_stat_1_label": "reach growth",
-    "platform_stat_2_num": "$0",
-    "platform_stat_2_label": "ad spend",
-    "editorial_title": "Editorial & Institutional Writing",
-    "editorial_desc": "Developed written content including proposals, speeches, press releases, institutional articles, and campaign content in collaboration with universities, media outlets, and partner organizations.",
-    "editorial_stat_1_num": "20+",
-    "editorial_stat_1_label": "Press releases",
-    "editorial_stat_2_num": "12",
-    "editorial_stat_2_label": "international media coverages",
-    "rwanda_card_title": "Rwanda Special Supplement – Gulf Times",
-    "rwanda_card_desc": "Developed editorial content and coordinated materials for a Rwanda-focused special supplement.",
-    "georgetown_card_title": "Georgetown University Qatar – Rwanda Student Visit Feature",
-    "georgetown_card_desc": "Supported the development of a feature story on students' visit to Rwanda in collaboration with Georgetown University in Qatar.",
-    "photo_title": "Event Photography",
-    "photo_desc": "Visual documentation during MoU signings, high-level meetings, and diplomatic functions — professional, platform-ready images that support institutional storytelling.",
-    "photo_stat_1_num": "50+",
-    "photo_stat_1_label": "Events covered",
-    "photo_stat_2_num": "6+",
-    "photo_stat_2_label": "Years of experience",
-    "graphics_title": "Graphics & Visual Storytelling",
-    "graphics_desc": "Custom graphics and visual assets using Canva and Adobe Illustrator, tailored to cultural celebrations, elections, and institutional public awareness campaigns.",
-    "graphics_stat_1_num": "30+",
-    "graphics_stat_1_label": "graphics per month"
+    "items": [
+      {
+        "title": "Media Familiarization Trip",
+        "desc": "Rwanda's story was often told through outdated lenses. I conceptualized and led a flagship initiative inviting Qatari and regional journalists to experience Rwanda firsthand, shifting narratives toward innovation, tourism, and development.",
+        "tags": "Media Relations, Cultural Diplomacy, Tourism",
+        "stat_1_num": "26",
+        "stat_1_label": "media coverages generated",
+        "stat_2_num": "6+",
+        "stat_2_label": "major Qatari outlets"
+      },
+      {
+        "title": "Platform Management",
+        "desc": "Built an organization's entire digital presence: website, Twitter (X), LinkedIn, and Instagram, using a three-pillar strategy: authentic storytelling, cultural relevance, and data-driven content.",
+        "tags": "Social Media, Content Strategy, Analytics",
+        "stat_1_num": "500%",
+        "stat_1_label": "reach growth",
+        "stat_2_num": "$0",
+        "stat_2_label": "ad spend"
+      },
+      {
+        "title": "Editorial & Institutional Writing",
+        "desc": "Developed written content including proposals, speeches, press releases, institutional articles, and campaign content in collaboration with universities, media outlets, and partner organizations.",
+        "tags": "Writing, Editorial, Institutional Communications",
+        "stat_1_num": "20+",
+        "stat_1_label": "Press releases",
+        "stat_2_num": "12",
+        "stat_2_label": "international media coverages"
+      },
+      {
+        "title": "Event Photography",
+        "desc": "Visual documentation during MoU signings, high-level meetings, and diplomatic functions — professional, platform-ready images that support institutional storytelling.",
+        "tags": "Visual Documentation, Photography",
+        "stat_1_num": "50+",
+        "stat_1_label": "Events covered",
+        "stat_2_num": "6+",
+        "stat_2_label": "Years of experience"
+      },
+      {
+        "title": "Graphics & Visual Storytelling",
+        "desc": "Custom graphics and visual assets using Canva and Adobe Illustrator, tailored to cultural celebrations, elections, and institutional public awareness campaigns.",
+        "tags": "Visual Design, Brand Identity",
+        "stat_1_num": "30+",
+        "stat_1_label": "graphics per month",
+        "stat_2_num": "",
+        "stat_2_label": ""
+      }
+    ]
   },
   "journey": {
     "section_sub": "Institutions that trust me to tell their stories — diplomacy, higher education, and creative industries, across Qatar and beyond.",
-    "job_1_date": "JUN 2023 – PRESENT",
-    "job_1_role": "Communications Officer",
-    "job_1_org": "Embassy of the Republic of Rwanda to the State of Qatar",
-    "job_1_desc": "Lead strategic communications and cultural diplomacy initiatives while managing public-facing projects, international events and exhibitions, and stakeholder relations.",
-    "job_2_date": "AUG 2025 – OCT 2025",
-    "job_2_role": "Acting Executive Assistant to the Ambassador (Interim)",
-    "job_2_org": "Embassy of the Republic of Rwanda to the State of Qatar",
-    "job_2_desc": "Supported diplomatic coordination, institutional communication, and administrative workflow during high-level engagements and events.",
-    "job_3_date": "NOV 2022 – MAR 2023",
-    "job_3_role": "Public Relations Assistant Intern",
-    "job_3_org": "U.S. Embassy in Doha",
-    "job_3_desc": "Assisted with public diplomacy initiatives, event support, and development of communication materials for outreach programs.",
-    "job_4_date": "JUN 2022 – OCT 2022",
-    "job_4_role": "Multimedia Assistant Intern",
-    "job_4_org": "Qatar Foundation",
-    "job_4_desc": "Supported multimedia storytelling, content production, and communication projects focused on youth and institutional programs.",
-    "job_5_date": "MAY 2021 – APR 2022",
-    "job_5_role": "Social Media Chair",
-    "job_5_org": "Studio 20Q, Northwestern University Qatar",
-    "job_5_desc": "Managed social media content and digital campaigns for student-led media projects and events.",
-    "job_6_date": "JUN 2020 – AUG 2020",
-    "job_6_role": "Digital Communications Intern",
-    "job_6_org": "GWC Logistics",
-    "job_6_desc": "Assisted in digital content creation and marketing communications across multiple platforms.",
-    "job_7_date": "OCT 2019 – MAY 2022",
-    "job_7_role": "Student Office Assistant",
-    "job_7_org": "Northwestern University in Qatar",
-    "job_7_desc": "Supported student services, communications, and event coordination within the Student Affairs department."
+    "jobs": [
+      {
+        "date": "JUN 2023 – PRESENT",
+        "role": "Communications Officer",
+        "org": "Embassy of the Republic of Rwanda to the State of Qatar",
+        "desc": "Lead strategic communications and cultural diplomacy initiatives while managing public-facing projects, international events and exhibitions, and stakeholder relations."
+      },
+      {
+        "date": "AUG 2025 – OCT 2025",
+        "role": "Acting Executive Assistant to the Ambassador (Interim)",
+        "org": "Embassy of the Republic of Rwanda to the State of Qatar",
+        "desc": "Supported diplomatic coordination, institutional communication, and administrative workflow during high-level engagements and events."
+      },
+      {
+        "date": "NOV 2022 – MAR 2023",
+        "role": "Public Relations Assistant Intern",
+        "org": "U.S. Embassy in Doha",
+        "desc": "Assisted with public diplomacy initiatives, event support, and development of communication materials for outreach programs."
+      },
+      {
+        "date": "JUN 2022 – OCT 2022",
+        "role": "Multimedia Assistant Intern",
+        "org": "Qatar Foundation",
+        "desc": "Supported multimedia storytelling, content production, and communication projects focused on youth and institutional programs."
+      },
+      {
+        "date": "MAY 2021 – APR 2022",
+        "role": "Social Media Chair",
+        "org": "Studio 20Q, Northwestern University Qatar",
+        "desc": "Managed social media content and digital campaigns for student-led media projects and events."
+      },
+      {
+        "date": "JUN 2020 – AUG 2020",
+        "role": "Digital Communications Intern",
+        "org": "GWC Logistics",
+        "desc": "Assisted in digital content creation and marketing communications across multiple platforms."
+      },
+      {
+        "date": "OCT 2019 – MAY 2022",
+        "role": "Student Office Assistant",
+        "org": "Northwestern University in Qatar",
+        "desc": "Supported student services, communications, and event coordination within the Student Affairs department."
+      }
+    ]
   },
   "education": {
     "section_sub": "Across Education City universities — advanced skills in communication, social media, and digital storytelling in a richly multicultural environment.",
-    "deg_1_year": "2024 – 2025",
-    "deg_1_title": "Master of Arts in Digital Humanities and Societies",
-    "deg_1_school": "Hamad Bin Khalifa University",
-    "deg_2_year": "2019 – 2023",
-    "deg_2_title": "BS in Communication, Major in Media Industries & Technology",
-    "deg_2_school": "Northwestern University in Qatar",
-    "deg_3_year": "2020 – 2023",
-    "deg_3_title": "Minor in Media and Politics",
-    "deg_3_school": "NU-Q in collaboration with Georgetown University – Qatar",
-    "deg_4_year": "2020 – 2023",
-    "deg_4_title": "Strategic Communication Certificate",
-    "deg_4_school": "Northwestern University – Qatar"
+    "degrees": [
+      {
+        "badge": "Master's",
+        "year": "2024 – 2025",
+        "title": "Master of Arts in Digital Humanities and Societies",
+        "school": "Hamad Bin Khalifa University"
+      },
+      {
+        "badge": "Bachelor's",
+        "year": "2019 – 2023",
+        "title": "BS in Communication, Major in Media Industries & Technology",
+        "school": "Northwestern University in Qatar"
+      },
+      {
+        "badge": "Minor",
+        "year": "2020 – 2023",
+        "title": "Minor in Media and Politics",
+        "school": "NU-Q in collaboration with Georgetown University – Qatar"
+      },
+      {
+        "badge": "Certificate",
+        "year": "2020 – 2023",
+        "title": "Strategic Communication Certificate",
+        "school": "Northwestern University – Qatar"
+      }
+    ]
   },
   "beyond": {
-    "speaking_desc": "Co-founded a public speaking community that organizes workshops, events, and The Speaking Circle podcast.",
-    "cooking_desc": "When I'm not crafting messages, I'm mixing flavors. Cooking is my hobby, my therapy, and my favourite way to communicate.",
-    "volunteering_desc": "Because someone opened the door for me, I make sure it stays open for those behind me through giving back to the community."
+    "items": [
+      {
+        "icon": "🎤",
+        "title": "The Speaking Circle",
+        "desc": "Co-founded a public speaking community that organizes workshops, events, and The Speaking Circle podcast."
+      },
+      {
+        "icon": "🍳",
+        "title": "Cooking",
+        "desc": "When I'm not crafting messages, I'm mixing flavors. Cooking is my hobby, my therapy, and my favourite way to communicate."
+      },
+      {
+        "icon": "🤝",
+        "title": "Volunteering",
+        "desc": "Because someone opened the door for me, I make sure it stays open for those behind me through giving back to the community."
+      }
+    ]
   },
+  "custom_sections": [],
   "contact": {
     "quote": "I would love to hear about your experience and how we can work together.",
     "email": "milena.kaligirwa@gmail.com",
