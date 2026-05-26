@@ -15,25 +15,8 @@
     "section_sub": "Campaigns, platforms, and stories that moved the needle — in diplomacy, media, and beyond.",
     "items": [
       {
-        "title": "Editorial & Institutional Writing",
-        "desc": "Developed written content including proposals, speeches, press releases, institutional articles, and campaign content in collaboration with universities, media outlets, and partner organizations.",
-        "tags": "Writing, Editorial, Institutional Communications",
-        "stat_1_num": "20+",
-        "stat_1_label": "Press releases",
-        "stat_2_num": "12",
-        "stat_2_label": "international media coverages"
-      },
-      {
-        "title": "Platform Management",
-        "desc": "Built an organization's entire digital presence: website, Twitter (X), LinkedIn, and Instagram, using a three-pillar strategy: authentic storytelling, cultural relevance, and data-driven content.",
-        "tags": "Social Media, Content Strategy, Analytics",
-        "stat_1_num": "500%",
-        "stat_1_label": "reach growth",
-        "stat_2_num": "$0",
-        "stat_2_label": "ad spend"
-      },
-      {
         "title": "Media Familiarization Trip",
+        "image": "images/img_02.jpeg",
         "desc": "Rwanda's story was often told through outdated lenses. I conceptualized and led a flagship initiative inviting Qatari and regional journalists to experience Rwanda firsthand, shifting narratives toward innovation, tourism, and development.",
         "tags": "Media Relations, Cultural Diplomacy, Tourism",
         "stat_1_num": "26",
@@ -42,7 +25,29 @@
         "stat_2_label": "major Qatari outlets"
       },
       {
+        "title": "Platform Management",
+        "image": "images/img_01.png",
+        "desc": "Built an organization's entire digital presence: website, Twitter (X), LinkedIn, and Instagram, using a three-pillar strategy: authentic storytelling, cultural relevance, and data-driven content.",
+        "tags": "Social Media, Content Strategy, Analytics",
+        "stat_1_num": "500%",
+        "stat_1_label": "reach growth",
+        "stat_2_num": "$0",
+        "stat_2_label": "ad spend"
+      },
+      {
+        "title": "Editorial & Institutional Writing",
+        "image": "images/img_03.png",
+        "desc": "Developed written content including proposals, speeches, press releases, institutional articles, and campaign content in collaboration with universities, media outlets, and partner organizations.",
+        "tags": "Writing, Editorial, Institutional Communications",
+        "stat_1_num": "20+",
+        "stat_1_label": "Press releases",
+        "stat_2_num": "12",
+        "stat_2_label": "international media coverages"
+      },
+      {
         "title": "Event Photography",
+        "image": "images/img_05.jpeg",
+        "grid_type": "photo",
         "desc": "Visual documentation during MoU signings, high-level meetings, and diplomatic functions — professional, platform-ready images that support institutional storytelling.",
         "tags": "Visual Documentation, Photography",
         "stat_1_num": "50+",
@@ -52,6 +57,8 @@
       },
       {
         "title": "Graphics & Visual Storytelling",
+        "image": "images/img_09.jpeg",
+        "grid_type": "graphics",
         "desc": "Custom graphics and visual assets using Canva and Adobe Illustrator, tailored to cultural celebrations, elections, and institutional public awareness campaigns.",
         "tags": "Visual Design, Brand Identity",
         "stat_1_num": "30+",
@@ -112,16 +119,16 @@
     "section_sub": "Across Education City universities — advanced skills in communication, social media, and digital storytelling in a richly multicultural environment.",
     "degrees": [
       {
-        "badge": "Bachelor's",
-        "year": "2019 – 2023",
-        "title": "BS in Communication, Major in Media Industries & Technology",
-        "school": "Northwestern University in Qatar"
-      },
-      {
         "badge": "Master's",
         "year": "2024 – 2025",
         "title": "Master of Arts in Digital Humanities and Societies",
         "school": "Hamad Bin Khalifa University"
+      },
+      {
+        "badge": "Bachelor's",
+        "year": "2019 – 2023",
+        "title": "BS in Communication, Major in Media Industries & Technology",
+        "school": "Northwestern University in Qatar"
       },
       {
         "badge": "Minor",
@@ -141,6 +148,7 @@
     "items": [
       {
         "icon": "🎤",
+        "image": "images/img_25.png",
         "title": "The Speaking Circle",
         "desc": "Co-founded a public speaking community that organizes workshops, events, and The Speaking Circle podcast."
       },
@@ -156,20 +164,7 @@
       }
     ]
   },
-  "custom_sections": [
-    {
-      "label": "testing sectio n",
-      "title": "test",
-      "subtitle": "ffffff",
-      "items": [
-        {
-          "title": "event 1",
-          "detail": "events 3",
-          "desc": "ffff"
-        }
-      ]
-    }
-  ],
+  "custom_sections": [],
   "contact": {
     "quote": "I would love to hear about your experience and how we can work together.",
     "email": "milena.kaligirwa@gmail.com",

@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#E8609A" />
   <title>Milena Kaligirwa – Strategic Communications Specialist</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Netlify Identity for CMS login -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  <a href="#hero" class="skip-link">Skip to main content</a>
+  <div aria-live="polite" aria-atomic="true" id="live-region" class="sr-only"></div>
 
   <div class="orb orb--1" aria-hidden="true"></div>
   <div class="orb orb--2" aria-hidden="true"></div>
@@ -56,7 +57,7 @@
     </div>
     <div class="hero__visual">
       <div class="hero__photo-wrap">
-        <img src="images/img_00.png" alt="Milena Kaligirwa" class="hero__photo" />
+        <img src="images/img_00.png" alt="Milena Kaligirwa" class="hero__photo" width="480" height="540" fetchpriority="high" />
         <div class="hero__photo-tag">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           Communications Officer
@@ -114,147 +115,8 @@
         <p class="section__sub" data-cms="projects.section_sub">Campaigns, platforms, and stories that moved the needle — in diplomacy, media, and beyond.</p>
       </div>
 
-      <article class="project project--feature project--media">
-        <div class="project__image">
-          <img src="images/img_02.jpeg" alt="Media Familiarization Trip in Rwanda" />
-          <div class="project__image-overlay">
-            <div class="project__meta-tags">
-              <span class="tag">Media Relations</span>
-              <span class="tag">Cultural Diplomacy</span>
-              <span class="tag">Tourism</span>
-            </div>
-          </div>
-        </div>
-        <div class="project__text">
-          <h3 class="project__title" data-cms="projects.media_title">Media Familiarization Trip</h3>
-          <p class="project__desc" data-cms="projects.media_desc">Rwanda's story was often told through outdated lenses. I conceptualized and led a flagship initiative inviting Qatari and regional journalists to experience Rwanda firsthand, shifting narratives toward innovation, tourism, and development.</p>
-          <div class="project__stats">
-            <div class="pstat">
-              <span class="pstat__num" data-cms="projects.media_stat_1_num">26</span>
-              <span class="pstat__label" data-cms="projects.media_stat_1_label">media coverages generated</span>
-            </div>
-            <div class="pstat">
-              <span class="pstat__num" data-cms="projects.media_stat_2_num">6+</span>
-              <span class="pstat__label" data-cms="projects.media_stat_2_label">major Qatari outlets</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="project project--feature project--digital project--flip">
-        <div class="project__image">
-          <img src="images/img_01.png" alt="Rwanda in Qatar website" />
-          <div class="project__image-overlay">
-            <div class="project__meta-tags">
-              <span class="tag">Social Media</span>
-              <span class="tag">Content Strategy</span>
-              <span class="tag">Analytics</span>
-            </div>
-          </div>
-        </div>
-        <div class="project__text">
-          <h3 class="project__title" data-cms="projects.platform_title">Platform Management</h3>
-          <p class="project__desc" data-cms="projects.platform_desc">Built an organization's entire digital presence: website, Twitter (X), LinkedIn, and Instagram, using a three-pillar strategy: authentic storytelling, cultural relevance, and data-driven content.</p>
-          <div class="project__stats">
-            <div class="pstat">
-              <span class="pstat__num" data-cms="projects.platform_stat_1_num">500%</span>
-              <span class="pstat__label" data-cms="projects.platform_stat_1_label">reach growth</span>
-            </div>
-            <div class="pstat">
-              <span class="pstat__num" data-cms="projects.platform_stat_2_num">$0</span>
-              <span class="pstat__label" data-cms="projects.platform_stat_2_label">ad spend</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="project project--editorial">
-        <div class="project__editorial-top">
-          <div class="project__meta-tags">
-            <span class="tag">Writing</span>
-            <span class="tag">Editorial</span>
-            <span class="tag">Institutional Communications</span>
-          </div>
-          <h3 class="project__title" data-cms="projects.editorial_title">Editorial &amp; Institutional Writing</h3>
-          <p class="project__desc" data-cms="projects.editorial_desc">Developed written content including proposals, speeches, press releases, institutional articles, and campaign content in collaboration with universities, media outlets, and partner organizations.</p>
-          <div class="project__stats">
-            <div class="pstat">
-              <span class="pstat__num" data-cms="projects.editorial_stat_1_num">20+</span>
-              <span class="pstat__label" data-cms="projects.editorial_stat_1_label">Press releases</span>
-            </div>
-            <div class="pstat">
-              <span class="pstat__num" data-cms="projects.editorial_stat_2_num">12</span>
-              <span class="pstat__label" data-cms="projects.editorial_stat_2_label">international media coverages</span>
-            </div>
-          </div>
-        </div>
-        <div class="editorial__cards">
-          <div class="editorial__card">
-            <div class="editorial__card-img"><img src="images/img_03.png" alt="Rwanda Special Supplement" /></div>
-            <div class="editorial__card-body">
-              <h4 data-cms="projects.rwanda_card_title">Rwanda Special Supplement – Gulf Times</h4>
-              <p data-cms="projects.rwanda_card_desc">Developed editorial content and coordinated materials for a Rwanda-focused special supplement.</p>
-            </div>
-          </div>
-          <div class="editorial__card">
-            <div class="editorial__card-img"><img src="images/img_04.png" alt="Georgetown University Qatar Feature" /></div>
-            <div class="editorial__card-body">
-              <h4 data-cms="projects.georgetown_card_title">Georgetown University Qatar – Rwanda Student Visit Feature</h4>
-              <p data-cms="projects.georgetown_card_desc">Supported the development of a feature story on students' visit to Rwanda in collaboration with Georgetown University in Qatar.</p>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <div class="projects__row">
-        <article class="project project--card project--photo">
-          <div class="project__card-header">
-            <div class="project__meta-tags">
-              <span class="tag">Visual Documentation</span>
-              <span class="tag">Photography</span>
-            </div>
-            <h3 class="project__title" data-cms="projects.photo_title">Event Photography</h3>
-            <p class="project__desc" data-cms="projects.photo_desc">Visual documentation during MoU signings, high-level meetings, and diplomatic functions — professional, platform-ready images that support institutional storytelling.</p>
-            <div class="project__stats">
-              <div class="pstat">
-                <span class="pstat__num" data-cms="projects.photo_stat_1_num">50+</span>
-                <span class="pstat__label" data-cms="projects.photo_stat_1_label">Events covered</span>
-              </div>
-              <div class="pstat">
-                <span class="pstat__num" data-cms="projects.photo_stat_2_num">6+</span>
-                <span class="pstat__label" data-cms="projects.photo_stat_2_label">Years of experience</span>
-              </div>
-            </div>
-          </div>
-          <div class="photo__grid">
-            <div class="photo__cell"><img src="images/img_05.jpeg" alt="Diplomatic meeting" /></div>
-            <div class="photo__cell"><img src="images/img_06.jpeg" alt="MoU signing" /></div>
-            <div class="photo__cell"><img src="images/img_07.jpeg" alt="Rwanda Coffee event" /></div>
-            <div class="photo__cell"><img src="images/img_08.jpeg" alt="Bilateral meeting" /></div>
-          </div>
-        </article>
-
-        <article class="project project--card project--graphics">
-          <div class="project__card-header">
-            <div class="project__meta-tags">
-              <span class="tag">Visual Design</span>
-              <span class="tag">Brand Identity</span>
-            </div>
-            <h3 class="project__title" data-cms="projects.graphics_title">Graphics &amp; Visual Storytelling</h3>
-            <p class="project__desc" data-cms="projects.graphics_desc">Custom graphics and visual assets using Canva and Adobe Illustrator, tailored to cultural celebrations, elections, and institutional public awareness campaigns.</p>
-            <div class="project__stats">
-              <div class="pstat">
-                <span class="pstat__num" data-cms="projects.graphics_stat_1_num">30+</span>
-                <span class="pstat__label" data-cms="projects.graphics_stat_1_label">graphics per month</span>
-              </div>
-            </div>
-          </div>
-          <div class="graphics__grid">
-            <div class="graphics__cell"><img src="images/img_09.jpeg" alt="Election polling graphic" /></div>
-            <div class="graphics__cell"><img src="images/img_10.jpeg" alt="Kwibuka 31 commemoration" /></div>
-            <div class="graphics__cell"><img src="images/img_11.jpeg" alt="Rwanda Pavilion Expo 2023" /></div>
-          </div>
-        </article>
+      <div id="projects-container">
+        <!-- populated by script.js from content.json -->
       </div>
     </div>
   </section>
@@ -267,70 +129,8 @@
         <h2 class="section__title">Career Journey</h2>
         <p class="section__sub" data-cms="journey.section_sub">Institutions that trust me to tell their stories — diplomacy, higher education, and creative industries, across Qatar and beyond.</p>
       </div>
-      <div class="timeline">
-        <div class="timeline__item timeline__item--active">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <span class="timeline__date" data-cms="journey.job_1_date">JUN 2023 – PRESENT</span>
-            <h3 class="timeline__role" data-cms="journey.job_1_role">Communications Officer</h3>
-            <p class="timeline__org" data-cms="journey.job_1_org">Embassy of the Republic of Rwanda to the State of Qatar</p>
-            <p class="timeline__desc" data-cms="journey.job_1_desc">Lead strategic communications and cultural diplomacy initiatives while managing public-facing projects, international events and exhibitions, and stakeholder relations.</p>
-          </div>
-        </div>
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <span class="timeline__date" data-cms="journey.job_2_date">AUG 2025 – OCT 2025</span>
-            <h3 class="timeline__role" data-cms="journey.job_2_role">Acting Executive Assistant to the Ambassador (Interim)</h3>
-            <p class="timeline__org" data-cms="journey.job_2_org">Embassy of the Republic of Rwanda to the State of Qatar</p>
-            <p class="timeline__desc" data-cms="journey.job_2_desc">Supported diplomatic coordination, institutional communication, and administrative workflow during high-level engagements and events.</p>
-          </div>
-        </div>
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <span class="timeline__date" data-cms="journey.job_3_date">NOV 2022 – MAR 2023</span>
-            <h3 class="timeline__role" data-cms="journey.job_3_role">Public Relations Assistant Intern</h3>
-            <p class="timeline__org" data-cms="journey.job_3_org">U.S. Embassy in Doha</p>
-            <p class="timeline__desc" data-cms="journey.job_3_desc">Assisted with public diplomacy initiatives, event support, and development of communication materials for outreach programs.</p>
-          </div>
-        </div>
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <span class="timeline__date" data-cms="journey.job_4_date">JUN 2022 – OCT 2022</span>
-            <h3 class="timeline__role" data-cms="journey.job_4_role">Multimedia Assistant Intern</h3>
-            <p class="timeline__org" data-cms="journey.job_4_org">Qatar Foundation</p>
-            <p class="timeline__desc" data-cms="journey.job_4_desc">Supported multimedia storytelling, content production, and communication projects focused on youth and institutional programs.</p>
-          </div>
-        </div>
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <span class="timeline__date" data-cms="journey.job_5_date">MAY 2021 – APR 2022</span>
-            <h3 class="timeline__role" data-cms="journey.job_5_role">Social Media Chair</h3>
-            <p class="timeline__org" data-cms="journey.job_5_org">Studio 20Q, Northwestern University Qatar</p>
-            <p class="timeline__desc" data-cms="journey.job_5_desc">Managed social media content and digital campaigns for student-led media projects and events.</p>
-          </div>
-        </div>
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <span class="timeline__date" data-cms="journey.job_6_date">JUN 2020 – AUG 2020</span>
-            <h3 class="timeline__role" data-cms="journey.job_6_role">Digital Communications Intern</h3>
-            <p class="timeline__org" data-cms="journey.job_6_org">GWC Logistics</p>
-            <p class="timeline__desc" data-cms="journey.job_6_desc">Assisted in digital content creation and marketing communications across multiple platforms.</p>
-          </div>
-        </div>
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <span class="timeline__date" data-cms="journey.job_7_date">OCT 2019 – MAY 2022</span>
-            <h3 class="timeline__role" data-cms="journey.job_7_role">Student Office Assistant</h3>
-            <p class="timeline__org" data-cms="journey.job_7_org">Northwestern University in Qatar</p>
-            <p class="timeline__desc" data-cms="journey.job_7_desc">Supported student services, communications, and event coordination within the Student Affairs department.</p>
-          </div>
-        </div>
+      <div class="timeline" id="timeline-container">
+        <!-- populated by script.js from content.json -->
       </div>
     </div>
   </section>
@@ -343,48 +143,25 @@
         <h2 class="section__title">My Education</h2>
         <p class="section__sub" data-cms="education.section_sub">Across Education City universities — advanced skills in communication, social media, and digital storytelling in a richly multicultural environment.</p>
       </div>
-      <div class="edu__grid">
-        <div class="edu__card edu__card--masters">
-          <span class="edu__badge">Master's</span>
-          <span class="edu__year" data-cms="education.deg_1_year">2024 – 2025</span>
-          <h3 class="edu__degree" data-cms="education.deg_1_title">Master of Arts in Digital Humanities and Societies</h3>
-          <p class="edu__school" data-cms="education.deg_1_school">Hamad Bin Khalifa University</p>
-        </div>
-        <div class="edu__card edu__card--bachelors">
-          <span class="edu__badge">Bachelor's</span>
-          <span class="edu__year" data-cms="education.deg_2_year">2019 – 2023</span>
-          <h3 class="edu__degree" data-cms="education.deg_2_title">BS in Communication, Major in Media Industries &amp; Technology</h3>
-          <p class="edu__school" data-cms="education.deg_2_school">Northwestern University in Qatar</p>
-        </div>
-        <div class="edu__card edu__card--minor">
-          <span class="edu__badge">Minor</span>
-          <span class="edu__year" data-cms="education.deg_3_year">2020 – 2023</span>
-          <h3 class="edu__degree" data-cms="education.deg_3_title">Minor in Media and Politics</h3>
-          <p class="edu__school" data-cms="education.deg_3_school">NU-Q in collaboration with Georgetown University – Qatar</p>
-        </div>
-        <div class="edu__card edu__card--cert">
-          <span class="edu__badge">Certificate</span>
-          <span class="edu__year" data-cms="education.deg_4_year">2020 – 2023</span>
-          <h3 class="edu__degree" data-cms="education.deg_4_title">Strategic Communication Certificate</h3>
-          <p class="edu__school" data-cms="education.deg_4_school">Northwestern University – Qatar</p>
-        </div>
+      <div class="edu__grid" id="edu-grid-container">
+        <!-- populated by script.js from content.json -->
       </div>
       <div class="tools">
         <p class="section__label" style="margin-bottom:16px">Toolkit</p>
         <h3 class="tools__title">Tools &amp; Platforms</h3>
         <div class="tools__list">
-          <div class="tool"><img src="images/img_21.jpeg" alt="Canva" /><span>Canva</span></div>
-          <div class="tool"><img src="images/img_15.png" alt="Adobe Creative Cloud" /><span>Adobe CC</span></div>
-          <div class="tool"><img src="images/img_14.png" alt="Adobe Illustrator" /><span>Illustrator</span></div>
-          <div class="tool"><img src="images/img_13.png" alt="Adobe Premiere Pro" /><span>Premiere Pro</span></div>
-          <div class="tool"><img src="images/img_16.png" alt="CapCut" /><span>CapCut</span></div>
-          <div class="tool"><img src="images/img_20.png" alt="Asana" /><span>Asana</span></div>
-          <div class="tool"><img src="images/img_18.png" alt="HubSpot" /><span>HubSpot</span></div>
-          <div class="tool"><img src="images/img_23.png" alt="Eventbrite" /><span>Eventbrite</span></div>
-          <div class="tool"><img src="images/img_19.png" alt="DaVinci Resolve" /><span>DaVinci</span></div>
-          <div class="tool"><img src="images/img_17.png" alt="Mailchimp" /><span>Mailchimp</span></div>
-          <div class="tool"><img src="images/img_24.png" alt="Google Analytics" /><span>Analytics</span></div>
-          <div class="tool"><img src="images/img_22.png" alt="Microsoft Office" /><span>MS Office</span></div>
+          <div class="tool"><img src="images/img_21.jpeg" alt="Canva" loading="lazy" width="40" height="40" /><span>Canva</span></div>
+          <div class="tool"><img src="images/img_15.png" alt="Adobe Creative Cloud" loading="lazy" width="40" height="40" /><span>Adobe CC</span></div>
+          <div class="tool"><img src="images/img_14.png" alt="Adobe Illustrator" loading="lazy" width="40" height="40" /><span>Illustrator</span></div>
+          <div class="tool"><img src="images/img_13.png" alt="Adobe Premiere Pro" loading="lazy" width="40" height="40" /><span>Premiere Pro</span></div>
+          <div class="tool"><img src="images/img_16.png" alt="CapCut" loading="lazy" width="40" height="40" /><span>CapCut</span></div>
+          <div class="tool"><img src="images/img_20.png" alt="Asana" loading="lazy" width="40" height="40" /><span>Asana</span></div>
+          <div class="tool"><img src="images/img_18.png" alt="HubSpot" loading="lazy" width="40" height="40" /><span>HubSpot</span></div>
+          <div class="tool"><img src="images/img_23.png" alt="Eventbrite" loading="lazy" width="40" height="40" /><span>Eventbrite</span></div>
+          <div class="tool"><img src="images/img_19.png" alt="DaVinci Resolve" loading="lazy" width="40" height="40" /><span>DaVinci</span></div>
+          <div class="tool"><img src="images/img_17.png" alt="Mailchimp" loading="lazy" width="40" height="40" /><span>Mailchimp</span></div>
+          <div class="tool"><img src="images/img_24.png" alt="Google Analytics" loading="lazy" width="40" height="40" /><span>Analytics</span></div>
+          <div class="tool"><img src="images/img_22.png" alt="Microsoft Office" loading="lazy" width="40" height="40" /><span>MS Office</span></div>
         </div>
       </div>
     </div>
@@ -398,29 +175,14 @@
         <h2 class="section__title">Outside of Work</h2>
         <p class="section__sub">You will find me…</p>
       </div>
-      <div class="beyond__grid">
-        <div class="beyond__card beyond__card--speaking">
-          <div class="beyond__logo"><img src="images/img_25.png" alt="The Speaking Circle" /></div>
-          <h3>The Speaking Circle</h3>
-          <p data-cms="beyond.speaking_desc">Co-founded a public speaking community that organizes workshops, events, and The Speaking Circle podcast.</p>
-        </div>
-        <div class="beyond__card beyond__card--cooking">
-          <div class="beyond__icon">
-            <svg viewBox="0 0 64 64" fill="none"><path d="M16 28 C16 20 48 20 48 28 L46 50 H18 Z" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M24 28 C24 18 24 14 28 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M32 28 C32 18 32 14 32 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M40 28 C40 18 40 14 36 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Cooking</h3>
-          <p data-cms="beyond.cooking_desc">When I'm not crafting messages, I'm mixing flavors. Cooking is my hobby, my therapy, and my favourite way to communicate.</p>
-        </div>
-        <div class="beyond__card beyond__card--volunteering">
-          <div class="beyond__icon">
-            <svg viewBox="0 0 64 64" fill="none"><path d="M32 12 C32 12 20 18 20 28 C20 34 25 38 32 38 C39 38 44 34 44 28 C44 18 32 12 32 12Z" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M20 44 C20 44 14 46 12 52 L52 52 C50 46 44 44 44 44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M26 28 L30 32 L38 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Volunteering</h3>
-          <p data-cms="beyond.volunteering_desc">Because someone opened the door for me, I make sure it stays open for those behind me through giving back to the community.</p>
-        </div>
+      <div class="beyond__grid" id="beyond-container">
+        <!-- populated by script.js from content.json -->
       </div>
     </div>
   </section>
+
+  <!-- CUSTOM SECTIONS -->
+  <div id="custom-sections-container"></div>
 
   <!-- CONTACT -->
   <section class="section contact" id="contact">
@@ -428,7 +190,7 @@
       <div class="contact__inner">
         <p class="section__label contact__label">Get in Touch</p>
         <h2 class="contact__title">Let's Connect</h2>
-        <p class="contact__quote" data-cms="contact.quote">"I would love to hear about your experience and how we can work together."</p>
+        <p class="contact__quote" data-cms="contact.quote">&#8220;I would love to hear about your experience and how we can work together.&#8221;</p>
         <div class="contact__links">
           <a class="contact__link" id="contact-email">
             <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M2 8 L12 14 L22 8" stroke="currentColor" stroke-width="1.8"/></svg>
