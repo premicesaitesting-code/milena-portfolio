@@ -164,20 +164,7 @@
       }
     ]
   },
-  "custom_sections": [
-    {
-      "label": "test",
-      "title": "",
-      "subtitle": "ree",
-      "items": [
-        {
-          "title": "test",
-          "detail": "",
-          "desc": ""
-        }
-      ]
-    }
-  ],
+  "custom_sections": [],
   "contact": {
     "quote": "I would love to hear about your experience and how we can work together.",
     "email": "milena.kaligirwa@gmail.com",
