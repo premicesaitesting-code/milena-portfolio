@@ -16,6 +16,21 @@ const navLinks = document.querySelector('.nav__links');
 burger.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
 
+// ── Scrollspy active nav ───────────────────────────────────────
+const sections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav__links a[href^="#"]');
+const scrollspy = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navAnchors.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { threshold: 0.35, rootMargin: '-10% 0px -55% 0px' });
+sections.forEach(s => scrollspy.observe(s));
+
 // ── Load CMS content ───────────────────────────────────────────
 fetch('/_data/content.json')
   .then(r => r.ok ? r.json() : null)
