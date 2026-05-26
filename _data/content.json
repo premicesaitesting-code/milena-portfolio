@@ -15,13 +15,13 @@
     "section_sub": "Campaigns, platforms, and stories that moved the needle — in diplomacy, media, and beyond.",
     "items": [
       {
-        "title": "Media Familiarization Trip",
-        "desc": "Rwanda's story was often told through outdated lenses. I conceptualized and led a flagship initiative inviting Qatari and regional journalists to experience Rwanda firsthand, shifting narratives toward innovation, tourism, and development.",
-        "tags": "Media Relations, Cultural Diplomacy, Tourism",
-        "stat_1_num": "26",
-        "stat_1_label": "media coverages generated",
-        "stat_2_num": "6+",
-        "stat_2_label": "major Qatari outlets"
+        "title": "Editorial & Institutional Writing",
+        "desc": "Developed written content including proposals, speeches, press releases, institutional articles, and campaign content in collaboration with universities, media outlets, and partner organizations.",
+        "tags": "Writing, Editorial, Institutional Communications",
+        "stat_1_num": "20+",
+        "stat_1_label": "Press releases",
+        "stat_2_num": "12",
+        "stat_2_label": "international media coverages"
       },
       {
         "title": "Platform Management",
@@ -33,13 +33,13 @@
         "stat_2_label": "ad spend"
       },
       {
-        "title": "Editorial & Institutional Writing",
-        "desc": "Developed written content including proposals, speeches, press releases, institutional articles, and campaign content in collaboration with universities, media outlets, and partner organizations.",
-        "tags": "Writing, Editorial, Institutional Communications",
-        "stat_1_num": "20+",
-        "stat_1_label": "Press releases",
-        "stat_2_num": "12",
-        "stat_2_label": "international media coverages"
+        "title": "Media Familiarization Trip",
+        "desc": "Rwanda's story was often told through outdated lenses. I conceptualized and led a flagship initiative inviting Qatari and regional journalists to experience Rwanda firsthand, shifting narratives toward innovation, tourism, and development.",
+        "tags": "Media Relations, Cultural Diplomacy, Tourism",
+        "stat_1_num": "26",
+        "stat_1_label": "media coverages generated",
+        "stat_2_num": "6+",
+        "stat_2_label": "major Qatari outlets"
       },
       {
         "title": "Event Photography",
@@ -112,16 +112,16 @@
     "section_sub": "Across Education City universities — advanced skills in communication, social media, and digital storytelling in a richly multicultural environment.",
     "degrees": [
       {
-        "badge": "Master's",
-        "year": "2024 – 2025",
-        "title": "Master of Arts in Digital Humanities and Societies",
-        "school": "Hamad Bin Khalifa University"
-      },
-      {
         "badge": "Bachelor's",
         "year": "2019 – 2023",
         "title": "BS in Communication, Major in Media Industries & Technology",
         "school": "Northwestern University in Qatar"
+      },
+      {
+        "badge": "Master's",
+        "year": "2024 – 2025",
+        "title": "Master of Arts in Digital Humanities and Societies",
+        "school": "Hamad Bin Khalifa University"
       },
       {
         "badge": "Minor",
@@ -156,7 +156,20 @@
       }
     ]
   },
-  "custom_sections": [],
+  "custom_sections": [
+    {
+      "label": "testing sectio n",
+      "title": "test",
+      "subtitle": "ffffff",
+      "items": [
+        {
+          "title": "event 1",
+          "detail": "events 3",
+          "desc": "ffff"
+        }
+      ]
+    }
+  ],
   "contact": {
     "quote": "I would love to hear about your experience and how we can work together.",
     "email": "milena.kaligirwa@gmail.com",
