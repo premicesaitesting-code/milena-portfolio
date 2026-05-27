@@ -12,7 +12,7 @@
     "stat_3_label": "intl. media coverages"
   },
   "projects": {
-    "section_sub": "Campaigns, platforms, and stories that moved the needle — in diplomacy, media, and beyond.",
+    "section_sub": "Campaigns, platforms, and stories that moved the needle in diplomacy, media, and beyond.",
     "items": [
       {
         "title": "Media Familiarization Trip",
@@ -20,9 +20,9 @@
         "desc": "Rwanda's story was often told through outdated lenses. I conceptualized and led a flagship initiative inviting Qatari and regional journalists to experience Rwanda firsthand, shifting narratives toward innovation, tourism, and development.",
         "tags": "Media Relations, Cultural Diplomacy, Tourism",
         "stat_1_num": "26",
-        "stat_1_label": "media coverages generated",
+        "stat_1_label": "Media coverages generated",
         "stat_2_num": "6+",
-        "stat_2_label": "major Qatari outlets"
+        "stat_2_label": "Major Qatari outlets"
       },
       {
         "title": "Platform Management",
@@ -30,30 +30,30 @@
         "desc": "Built an organization's entire digital presence: website, Twitter (X), LinkedIn, and Instagram, using a three-pillar strategy: authentic storytelling, cultural relevance, and data-driven content.",
         "tags": "Social Media, Content Strategy, Analytics",
         "stat_1_num": "500%",
-        "stat_1_label": "reach growth",
-        "stat_2_num": "$0",
-        "stat_2_label": "ad spend"
+        "stat_1_label": "Reach growth",
+        "stat_2_num": "30+",
+        "stat_2_label": "Campaigns executed"
       },
       {
         "title": "Editorial & Institutional Writing",
         "image": "images/img_03.png",
-        "desc": "Developed written content including proposals, speeches, press releases, institutional articles, and campaign content in collaboration with universities, media outlets, and partner organizations.",
+        "desc": "Developed written content including supplements, proposals, speeches, press releases, institutional articles, and campaign content in collaboration with universities, media outlets, and partner organizations.",
         "tags": "Writing, Editorial, Institutional Communications",
         "stat_1_num": "20+",
         "stat_1_label": "Press releases",
         "stat_2_num": "12",
-        "stat_2_label": "international media coverages"
+        "stat_2_label": "International media coverages"
       },
       {
         "title": "Event Photography",
         "image": "images/img_05.jpeg",
         "grid_type": "photo",
-        "desc": "Visual documentation during MoU signings, high-level meetings, and diplomatic functions — professional, platform-ready images that support institutional storytelling.",
+        "desc": "Visual documentation during MoU signings, high-level meetings, and diplomatic functions. I capture professional, platform-ready images that support institutional storytelling.",
         "tags": "Visual Documentation, Photography",
         "stat_1_num": "50+",
         "stat_1_label": "Events covered",
         "stat_2_num": "6+",
-        "stat_2_label": "Years of experience"
+        "stat_2_label": "Years of experience in Photography"
       },
       {
         "title": "Graphics & Visual Storytelling",
@@ -62,9 +62,18 @@
         "desc": "Custom graphics and visual assets using Canva and Adobe Illustrator, tailored to cultural celebrations, elections, and institutional public awareness campaigns.",
         "tags": "Visual Design, Brand Identity",
         "stat_1_num": "30+",
-        "stat_1_label": "graphics per month",
+        "stat_1_label": "Graphics per month",
         "stat_2_num": "",
         "stat_2_label": ""
+      },
+      {
+        "title": "Short & Long-Form Video Production",
+        "desc": "Produced short-form and long-form video content for campaigns, events, interviews, and digital storytelling across diplomatic, educational, and cultural sectors.",
+        "tags": "Video production, Reels & Social Videos",
+        "stat_1_num": "100K+ ",
+        "stat_1_label": "Combined video views",
+        "stat_2_num": "30+",
+        "stat_2_label": "Videos produced"
       }
     ]
   },
