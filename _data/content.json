@@ -125,7 +125,7 @@
     ]
   },
   "education": {
-    "section_sub": "Across Education City universities — advanced skills in communication, social media, and digital storytelling in a richly multicultural environment.",
+    "section_sub": "Across Education City universities - advanced skills in communication, social media, and digital storytelling in a richly multicultural environment.",
     "degrees": [
       {
         "badge": "Master's",
@@ -150,6 +150,12 @@
         "year": "2020 – 2023",
         "title": "Strategic Communication Certificate",
         "school": "Northwestern University – Qatar"
+      },
+      {
+        "badge": "Certificate",
+        "year": "2021-2023",
+        "title": "Business Administration Sequence",
+        "school": "Carnegie Mellon University Qatar"
       }
     ]
   },
