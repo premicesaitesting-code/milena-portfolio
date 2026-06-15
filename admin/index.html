@@ -533,6 +533,15 @@
         <div class="form-group"><label>Title</label><input type="text" value="${escHtml(p.title||'')}" oninput="projects[${i}].title=this.value;renderProjects()" /></div>
         <div class="form-group"><label>Description</label><textarea oninput="projects[${i}].desc=this.value">${escHtml(p.desc||'')}</textarea></div>
         <div class="form-group"><label>Tags (comma-separated)</label><input type="text" value="${escHtml(p.tags||'')}" oninput="projects[${i}].tags=this.value" /></div>
+        <div class="form-group">
+          <label>Image <span style="font-weight:400;color:var(--light)">(optional — shown for this project)</span></label>
+          <div class="img-upload-wrap">
+            ${p.image ? `<img src="${escHtml(p.image)}" class="img-preview" alt="" /><button type="button" onclick="projects[${i}].image='';renderProjects()" style="font-size:.78rem;color:#dc2626;background:none;border:none;cursor:pointer;padding:4px 8px">✕ Remove</button>` : ''}
+            <label class="img-upload-btn">📎 ${p.image ? 'Replace' : 'Upload image'}<input type="file" accept="image/*" onchange="uploadProjectImage(${i},this)" /></label>
+            <span id="project-img-${i}" class="img-upload-note"></span>
+          </div>
+        </div>
+        <div class="form-group"><label>Video URL <span style="font-weight:400;color:var(--light)">(YouTube or Vimeo — shows as an embedded video instead of the image)</span></label><input type="url" value="${escHtml(p.video_url||'')}" oninput="projects[${i}].video_url=this.value" placeholder="https://www.youtube.com/watch?v=..." /></div>
         <div class="form-row">
           <div class="form-group"><label>Stat 1 Number</label><input type="text" value="${escHtml(p.stat_1_num||'')}" oninput="projects[${i}].stat_1_num=this.value" /></div>
           <div class="form-group"><label>Stat 1 Label</label><input type="text" value="${escHtml(p.stat_1_label||'')}" oninput="projects[${i}].stat_1_label=this.value" /></div>
@@ -550,13 +559,40 @@
   }
 
   function addProject() {
-    projects.push({ category: '', title: '', desc: '', tags: '', stat_1_num: '', stat_1_label: '', stat_2_num: '', stat_2_label: '', link: '', link_label: '' });
+    projects.push({ category: '', title: '', desc: '', tags: '', image: '', video_url: '', stat_1_num: '', stat_1_label: '', stat_2_num: '', stat_2_label: '', link: '', link_label: '' });
     renderProjects();
   }
 
   function removeProject(i) {
     projects.splice(i, 1);
     renderProjects();
+  }
+
+  async function uploadProjectImage(i, input) {
+    const file = input.files[0];
+    if (!file) return;
+    const statusEl = document.getElementById(`project-img-${i}`);
+    if (statusEl) statusEl.textContent = 'Uploading…';
+    const reader = new FileReader();
+    reader.onload = async e => {
+      try {
+        const r = await fetch('/api/upload-image', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password: sessionPwd, filename: file.name, base64: e.target.result })
+        });
+        const data = await r.json();
+        if (r.ok) {
+          projects[i].image = data.path;
+          renderProjects();
+          showToast('✓ Image uploaded', 'success');
+        } else {
+          if (statusEl) statusEl.textContent = 'Upload failed';
+          showToast('Upload error: ' + (data.error || 'Unknown'), 'error');
+        }
+      } catch { if (statusEl) statusEl.textContent = 'Network error'; }
+    };
+    reader.readAsDataURL(file);
   }
 
   // ── Dynamic beyond list ────────────────────────────────────

@@ -59,16 +59,23 @@ fetch('/_data/content.json')
 
       const renderFeature = (p, i) => {
         const flipClass = i % 2 === 1 ? ' project--flip' : '';
-        const imageHtml = p.image ? `
+        const embedUrl = getEmbedUrl(p.video_url);
+        const mediaHtml = embedUrl ? `
+          <div class="project__image project__image--video">
+            <div class="project__video-wrap"><iframe src="${embedUrl}" allowfullscreen loading="lazy" title="${p.title || 'Video'}"></iframe></div>
+          </div>`
+          : p.image ? `
           <div class="project__image">
             <img src="${p.image}" alt="${p.title || ''}" />
             <div class="project__image-overlay"><div class="project__meta-tags">${renderTags(p)}</div></div>
           </div>` : '';
+        // Tags appear over the image; otherwise show them in the text column
+        const tagsInText = !p.image || embedUrl;
         return `
           <article class="project project--feature${flipClass}">
-            ${imageHtml}
+            ${mediaHtml}
             <div class="project__text">
-              ${!p.image ? `<div class="project__meta-tags">${renderTags(p)}</div>` : ''}
+              ${tagsInText ? `<div class="project__meta-tags">${renderTags(p)}</div>` : ''}
               <h3 class="project__title">${p.title || ''}</h3>
               <p class="project__desc">${p.desc || ''}</p>
               ${renderStats(p)}
