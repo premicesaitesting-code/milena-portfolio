@@ -235,6 +235,18 @@ fetch('/_data/content.json')
       graphic_1:         '.graphics__cell:nth-child(1) img',
       graphic_2:         '.graphics__cell:nth-child(2) img',
       graphic_3:         '.graphics__cell:nth-child(3) img',
+      tool_1:            '.tools__list .tool:nth-child(1) img',
+      tool_2:            '.tools__list .tool:nth-child(2) img',
+      tool_3:            '.tools__list .tool:nth-child(3) img',
+      tool_4:            '.tools__list .tool:nth-child(4) img',
+      tool_5:            '.tools__list .tool:nth-child(5) img',
+      tool_6:            '.tools__list .tool:nth-child(6) img',
+      tool_7:            '.tools__list .tool:nth-child(7) img',
+      tool_8:            '.tools__list .tool:nth-child(8) img',
+      tool_9:            '.tools__list .tool:nth-child(9) img',
+      tool_10:           '.tools__list .tool:nth-child(10) img',
+      tool_11:           '.tools__list .tool:nth-child(11) img',
+      tool_12:           '.tools__list .tool:nth-child(12) img',
     };
     Object.entries(imageMap).forEach(([key, selector]) => {
       if (imgs[key]) {
