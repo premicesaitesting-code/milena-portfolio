@@ -207,5 +207,59 @@
     "phone": "+974 50200376",
     "linkedin": "https://www.linkedin.com/in/milena-jessy-/",
     "website": "https://milena-portfolio-sooty.vercel.app/"
+  },
+  "tools": {
+    "label": "Toolkit",
+    "title": "Tools & Platforms",
+    "items": [
+      {
+        "name": "Canva",
+        "image": "images/img_21.jpeg"
+      },
+      {
+        "name": "Adobe CC",
+        "image": "images/img_15.png"
+      },
+      {
+        "name": "Illustrator",
+        "image": "images/img_14.png"
+      },
+      {
+        "name": "Premiere Pro",
+        "image": "images/img_13.png"
+      },
+      {
+        "name": "CapCut",
+        "image": "images/img_16.png"
+      },
+      {
+        "name": "Asana",
+        "image": "images/img_20.png"
+      },
+      {
+        "name": "HubSpot",
+        "image": "images/img_18.png"
+      },
+      {
+        "name": "Eventbrite",
+        "image": "images/img_23.png"
+      },
+      {
+        "name": "DaVinci",
+        "image": "images/img_19.png"
+      },
+      {
+        "name": "Mailchimp",
+        "image": "images/img_17.png"
+      },
+      {
+        "name": "Analytics",
+        "image": "images/img_24.png"
+      },
+      {
+        "name": "MS Office",
+        "image": "images/img_22.png"
+      }
+    ]
   }
 }

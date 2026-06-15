@@ -240,6 +240,7 @@
         <button class="sidebar-link" onclick="showPanel('projects', this)"><span class="icon">💼</span> Projects</button>
         <button class="sidebar-link" onclick="showPanel('journey', this)"><span class="icon">🗓️</span> Career Journey</button>
         <button class="sidebar-link" onclick="showPanel('education', this)"><span class="icon">🎓</span> Education</button>
+        <button class="sidebar-link" onclick="showPanel('tools', this)"><span class="icon">🧰</span> Tools &amp; Platforms</button>
         <button class="sidebar-link" onclick="showPanel('beyond', this)"><span class="icon">✨</span> Beyond Work</button>
         <button class="sidebar-link" onclick="showPanel('contact', this)"><span class="icon">📬</span> Contact</button>
         <button class="sidebar-link" onclick="showPanel('custom', this)"><span class="icon">➕</span> Custom Sections</button>
@@ -359,6 +360,27 @@
         </div>
       </div>
 
+      <!-- TOOLS & PLATFORMS -->
+      <div class="panel" id="panel-tools">
+        <div class="panel__title">🧰 Tools &amp; Platforms</div>
+        <div class="panel__sub">The toolkit shown on your site. Add or remove tools, rename them, and upload a logo for each.</div>
+        <div class="form-section">
+          <div class="form-section__title"><span class="dot"></span>Section heading</div>
+          <div class="form-row">
+            <div class="form-group"><label>Label</label><input type="text" data-field="tools.label" placeholder="Toolkit" /></div>
+            <div class="form-group"><label>Title</label><input type="text" data-field="tools.title" placeholder="Tools & Platforms" /></div>
+          </div>
+        </div>
+        <div id="tools-list"></div>
+        <button class="btn-add" onclick="addTool()">+ Add Tool</button>
+        <div class="form-section">
+          <div class="save-bar">
+            <span class="save-status" id="status-tools"></span>
+            <button class="btn-save" onclick="saveSection('tools')">Save Changes</button>
+          </div>
+        </div>
+      </div>
+
       <!-- CONTACT -->
       <div class="panel" id="panel-contact">
         <div class="panel__title">📬 Contact</div>
@@ -411,18 +433,6 @@
             { key: 'graphic_1',         label: 'Graphic 1',                   section: 'Graphics' },
             { key: 'graphic_2',         label: 'Graphic 2',                   section: 'Graphics' },
             { key: 'graphic_3',         label: 'Graphic 3',                   section: 'Graphics' },
-            { key: 'tool_1',            label: 'Canva',                       section: 'Tools & Platforms' },
-            { key: 'tool_2',            label: 'Adobe CC',                    section: 'Tools & Platforms' },
-            { key: 'tool_3',            label: 'Illustrator',                 section: 'Tools & Platforms' },
-            { key: 'tool_4',            label: 'Premiere Pro',                section: 'Tools & Platforms' },
-            { key: 'tool_5',            label: 'CapCut',                      section: 'Tools & Platforms' },
-            { key: 'tool_6',            label: 'Asana',                       section: 'Tools & Platforms' },
-            { key: 'tool_7',            label: 'HubSpot',                     section: 'Tools & Platforms' },
-            { key: 'tool_8',            label: 'Eventbrite',                  section: 'Tools & Platforms' },
-            { key: 'tool_9',            label: 'DaVinci',                     section: 'Tools & Platforms' },
-            { key: 'tool_10',           label: 'Mailchimp',                   section: 'Tools & Platforms' },
-            { key: 'tool_11',           label: 'Analytics',                   section: 'Tools & Platforms' },
-            { key: 'tool_12',           label: 'MS Office',                   section: 'Tools & Platforms' },
           ];
 
           // Group slots by section
@@ -466,6 +476,7 @@
   let degrees = [];
   let projects = [];
   let beyondItems = [];
+  let toolItems = [];
   let customSections = [];
 
   // ── Login ──────────────────────────────────────────────────
@@ -666,6 +677,72 @@
   function removeBeyond(i) {
     beyondItems.splice(i, 1);
     renderBeyond();
+  }
+
+  // ── Dynamic tools list ─────────────────────────────────────
+  function renderTools() {
+    const container = document.getElementById('tools-list');
+    if (!container) return;
+    container.innerHTML = toolItems.map((t, i) => `
+      <div class="list-item">
+        <div class="list-item__header">
+          <div class="list-item__title"><span class="dot"></span>${escHtml(t.name || 'Tool ' + (i + 1))}</div>
+          <div style="display:flex;gap:6px;align-items:center">
+            <div class="reorder-btns">
+              <button class="btn-reorder" onclick="moveItem(toolItems,${i},-1,renderTools)" ${i===0?'disabled':''}>↑</button>
+              <button class="btn-reorder" onclick="moveItem(toolItems,${i},1,renderTools)" ${i===toolItems.length-1?'disabled':''}>↓</button>
+            </div>
+            <button class="btn-remove" onclick="removeTool(${i})">Remove</button>
+          </div>
+        </div>
+        <div class="form-group"><label>Name</label><input type="text" value="${escHtml(t.name||'')}" oninput="toolItems[${i}].name=this.value;renderTools()" /></div>
+        <div class="form-group">
+          <label>Logo</label>
+          <div class="img-upload-wrap">
+            ${t.image ? `<img src="${escHtml(t.image)}" class="img-preview" alt="${escHtml(t.name||'')}" /><button type="button" onclick="toolItems[${i}].image='';renderTools()" style="font-size:.78rem;color:#dc2626;background:none;border:none;cursor:pointer;padding:4px 8px">✕ Remove</button>` : ''}
+            <label class="img-upload-btn">📎 ${t.image ? 'Replace' : 'Upload logo'}<input type="file" accept="image/*" onchange="uploadToolImage(${i}, this)" /></label>
+            <span id="tool-upload-status-${i}" class="img-upload-note"></span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  async function uploadToolImage(i, input) {
+    const file = input.files[0];
+    if (!file) return;
+    const statusEl = document.getElementById(`tool-upload-status-${i}`);
+    if (statusEl) statusEl.textContent = 'Uploading…';
+    const reader = new FileReader();
+    reader.onload = async e => {
+      try {
+        const r = await fetch('/api/upload-image', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password: sessionPwd, filename: file.name, base64: e.target.result })
+        });
+        const data = await r.json();
+        if (r.ok) {
+          toolItems[i].image = data.path;
+          renderTools();
+          showToast('✓ Logo uploaded', 'success');
+        } else {
+          if (statusEl) statusEl.textContent = 'Upload failed';
+          showToast('Upload error: ' + (data.error || 'Unknown'), 'error');
+        }
+      } catch { if (statusEl) statusEl.textContent = 'Network error'; }
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function addTool() {
+    toolItems.push({ name: '', image: '' });
+    renderTools();
+  }
+
+  function removeTool(i) {
+    toolItems.splice(i, 1);
+    renderTools();
   }
 
   // ── Dynamic jobs list ──────────────────────────────────────
@@ -877,11 +954,13 @@
     degrees = Array.isArray(content.education?.degrees) ? JSON.parse(JSON.stringify(content.education.degrees)) : [];
     projects = Array.isArray(content.projects?.items) ? JSON.parse(JSON.stringify(content.projects.items)) : [];
     beyondItems = Array.isArray(content.beyond?.items) ? JSON.parse(JSON.stringify(content.beyond.items)) : [];
+    toolItems = Array.isArray(content.tools?.items) ? JSON.parse(JSON.stringify(content.tools.items)) : [];
     customSections = Array.isArray(content.custom_sections) ? JSON.parse(JSON.stringify(content.custom_sections)) : [];
     renderJobs();
     renderDegrees();
     renderProjects();
     renderBeyond();
+    renderTools();
     renderCustomSections();
     populateImagePreviews();
   }
@@ -903,6 +982,8 @@
     updated.projects.items = JSON.parse(JSON.stringify(projects));
     if (!updated.beyond) updated.beyond = {};
     updated.beyond.items = JSON.parse(JSON.stringify(beyondItems));
+    if (!updated.tools) updated.tools = {};
+    updated.tools.items = JSON.parse(JSON.stringify(toolItems));
     updated.custom_sections = JSON.parse(JSON.stringify(customSections));
     return updated;
   }
