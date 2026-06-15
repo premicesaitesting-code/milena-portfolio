@@ -536,12 +536,16 @@
           <div class="form-group"><label>Stat 2 Number</label><input type="text" value="${escHtml(p.stat_2_num||'')}" oninput="projects[${i}].stat_2_num=this.value" /></div>
           <div class="form-group"><label>Stat 2 Label</label><input type="text" value="${escHtml(p.stat_2_label||'')}" oninput="projects[${i}].stat_2_label=this.value" /></div>
         </div>
+        <div class="form-row">
+          <div class="form-group"><label>View Project Link <span style="font-weight:400;color:var(--light)">(optional)</span></label><input type="url" value="${escHtml(p.link||'')}" oninput="projects[${i}].link=this.value" placeholder="https://..." /></div>
+          <div class="form-group"><label>Button Label</label><input type="text" value="${escHtml(p.link_label||'')}" oninput="projects[${i}].link_label=this.value" placeholder="View Project" /></div>
+        </div>
       </div>
     `).join('');
   }
 
   function addProject() {
-    projects.push({ title: '', desc: '', tags: '', stat_1_num: '', stat_1_label: '', stat_2_num: '', stat_2_label: '' });
+    projects.push({ title: '', desc: '', tags: '', stat_1_num: '', stat_1_label: '', stat_2_num: '', stat_2_label: '', link: '', link_label: '' });
     renderProjects();
   }
 
@@ -736,6 +740,19 @@
                   <div class="form-group"><label>Detail (date, tag…)</label><input type="text" value="${escHtml(item.detail||'')}" oninput="customSections[${si}].items[${ii}].detail=this.value" /></div>
                 </div>
                 <div class="form-group"><label>Description</label><textarea oninput="customSections[${si}].items[${ii}].desc=this.value">${escHtml(item.desc||'')}</textarea></div>
+                <div class="form-group">
+                  <label>Image <span style="font-weight:400;color:var(--light)">(optional)</span></label>
+                  <div class="img-upload-wrap">
+                    ${item.image ? `<img src="${escHtml(item.image)}" class="img-preview" alt="" /><button type="button" onclick="customSections[${si}].items[${ii}].image='';renderCustomSections()" style="font-size:.78rem;color:#dc2626;background:none;border:none;cursor:pointer;padding:4px 8px">✕ Remove</button>` : ''}
+                    <label class="img-upload-btn">📎 ${item.image ? 'Replace' : 'Upload image'}<input type="file" accept="image/*" onchange="uploadCustomItemImage(${si},${ii},this)" /></label>
+                    <span id="custom-item-img-${si}-${ii}" class="img-upload-note"></span>
+                  </div>
+                </div>
+                <div class="form-group"><label>Video URL <span style="font-weight:400;color:var(--light)">(YouTube or Vimeo — shows as embedded video)</span></label><input type="url" value="${escHtml(item.video_url||'')}" oninput="customSections[${si}].items[${ii}].video_url=this.value" placeholder="https://www.youtube.com/watch?v=..." /></div>
+                <div class="form-row">
+                  <div class="form-group"><label>Link URL <span style="font-weight:400;color:var(--light)">(optional)</span></label><input type="url" value="${escHtml(item.link||'')}" oninput="customSections[${si}].items[${ii}].link=this.value" placeholder="https://..." /></div>
+                  <div class="form-group"><label>Link Label</label><input type="text" value="${escHtml(item.link_label||'')}" oninput="customSections[${si}].items[${ii}].link_label=this.value" placeholder="View Project" /></div>
+                </div>
               </div>
             `).join('')}
           </div>
@@ -757,8 +774,35 @@
 
   function addCustomItem(si) {
     if (!customSections[si].items) customSections[si].items = [];
-    customSections[si].items.push({ title: '', detail: '', desc: '' });
+    customSections[si].items.push({ title: '', detail: '', desc: '', image: '', video_url: '', link: '', link_label: '' });
     renderCustomSections();
+  }
+
+  async function uploadCustomItemImage(si, ii, input) {
+    const file = input.files[0];
+    if (!file) return;
+    const statusEl = document.getElementById(`custom-item-img-${si}-${ii}`);
+    if (statusEl) statusEl.textContent = 'Uploading…';
+    const reader = new FileReader();
+    reader.onload = async e => {
+      try {
+        const r = await fetch('/api/upload-image', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password: sessionPwd, filename: file.name, base64: e.target.result })
+        });
+        const data = await r.json();
+        if (r.ok) {
+          customSections[si].items[ii].image = data.path;
+          renderCustomSections();
+          showToast('✓ Image uploaded', 'success');
+        } else {
+          if (statusEl) statusEl.textContent = 'Upload failed';
+          showToast('Upload error: ' + (data.error || 'Unknown'), 'error');
+        }
+      } catch { if (statusEl) statusEl.textContent = 'Network error'; }
+    };
+    reader.readAsDataURL(file);
   }
 
   function removeCustomItem(si, ii) {

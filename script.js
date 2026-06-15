@@ -4,6 +4,17 @@ function announce(msg) {
   if (r) { r.textContent = ''; requestAnimationFrame(() => { r.textContent = msg; }); }
 }
 
+// ── Parse YouTube / Vimeo URL into embed URL ───────────────────
+function getEmbedUrl(url) {
+  if (!url) return null;
+  const yt = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+  if (yt) return 'https://www.youtube.com/embed/' + yt[1] + '?rel=0';
+  const vm = url.match(/vimeo\.com\/(\d+)/);
+  if (vm) return 'https://player.vimeo.com/video/' + vm[1];
+  if (url.includes('/embed/') || url.includes('player.vimeo.com')) return url;
+  return null;
+}
+
 // ── Sticky nav shadow ──────────────────────────────────────────
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -15,21 +26,6 @@ const burger = document.getElementById('burger');
 const navLinks = document.querySelector('.nav__links');
 burger.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
-
-// ── Scrollspy active nav ───────────────────────────────────────
-const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav__links a[href^="#"]');
-const scrollspy = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.id;
-      navAnchors.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
-      });
-    }
-  });
-}, { threshold: 0.35, rootMargin: '-10% 0px -55% 0px' });
-sections.forEach(s => scrollspy.observe(s));
 
 // ── Load CMS content ───────────────────────────────────────────
 fetch('/_data/content.json')
@@ -55,11 +51,13 @@ fetch('/_data/content.json')
       const cardProjects = data.projects.items.filter(p => p.grid_type);
       const featureProjects = data.projects.items.filter(p => !p.grid_type);
 
-      const renderStats = p => `
+      const renderStats = p => (p.stat_1_num || p.stat_2_num) ? `
         <div class="project__stats">
           ${p.stat_1_num ? `<div class="pstat"><span class="pstat__num">${p.stat_1_num}</span><span class="pstat__label">${p.stat_1_label}</span></div>` : ''}
           ${p.stat_2_num ? `<div class="pstat"><span class="pstat__num">${p.stat_2_num}</span><span class="pstat__label">${p.stat_2_label}</span></div>` : ''}
-        </div>`;
+        </div>` : '';
+
+      const renderLink = p => p.link ? `<a href="${p.link}" target="_blank" rel="noopener" class="project__link">${p.link_label || 'View Project'} <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>` : '';
 
       const renderTags = p => (p.tags || '').split(',').map(t => `<span class="tag">${t.trim()}</span>`).join('');
 
@@ -78,6 +76,7 @@ fetch('/_data/content.json')
               <h3 class="project__title">${p.title || ''}</h3>
               <p class="project__desc">${p.desc || ''}</p>
               ${renderStats(p)}
+              ${renderLink(p)}
             </div>
           </article>`;
       }).join('');
@@ -104,6 +103,7 @@ fetch('/_data/content.json')
                   <h3 class="project__title">${p.title || ''}</h3>
                   <p class="project__desc">${p.desc || ''}</p>
                   ${renderStats(p)}
+                  ${renderLink(p)}
                 </div>
                 ${gridHtml}
               </article>`;
@@ -145,13 +145,23 @@ fetch('/_data/content.json')
               ${sec.subtitle ? `<p class="section__sub">${sec.subtitle}</p>` : ''}
             </div>
             <div class="custom-section__grid">
-              ${(sec.items || []).map(item => `
-                <div class="custom-section__card">
-                  ${item.detail ? `<span class="custom-section__detail">${item.detail}</span>` : ''}
-                  <h3 class="custom-section__title">${item.title || ''}</h3>
-                  ${item.desc ? `<p class="custom-section__desc">${item.desc}</p>` : ''}
-                </div>
-              `).join('')}
+              ${(sec.items || []).map(item => {
+                const embedUrl = getEmbedUrl(item.video_url);
+                const mediaHtml = embedUrl
+                  ? `<div class="custom-section__media"><div class="custom-section__video-wrap"><iframe src="${embedUrl}" allowfullscreen loading="lazy" title="${item.title || 'Video'}"></iframe></div></div>`
+                  : item.image
+                  ? `<div class="custom-section__media"><img src="${item.image}" alt="${item.title || ''}" loading="lazy" /></div>`
+                  : '';
+                const linkHtml = item.link ? `<a href="${item.link}" target="_blank" rel="noopener" class="custom-section__link">${item.link_label || 'View Project'} →</a>` : '';
+                return `
+                  <div class="custom-section__card${embedUrl || item.image ? ' custom-section__card--media' : ''}">
+                    ${mediaHtml}
+                    ${item.detail ? `<span class="custom-section__detail">${item.detail}</span>` : ''}
+                    <h3 class="custom-section__title">${item.title || ''}</h3>
+                    ${item.desc ? `<p class="custom-section__desc">${item.desc}</p>` : ''}
+                    ${linkHtml}
+                  </div>`;
+              }).join('')}
             </div>
           </div>
         </section>
