@@ -12,68 +12,87 @@
     "stat_3_label": "Media coverages"
   },
   "projects": {
-    "section_sub": "Campaigns, platforms, and stories that moved the needle in diplomacy, media, and beyond.",
+    "section_sub": "Selected campaigns, writing, and content — grouped by craft.",
     "items": [
       {
-        "title": "Media Familiarization Trip",
-        "image": "images/img_02.jpeg",
-        "desc": "Rwanda's story was often told through outdated lenses. I conceptualized and led a flagship initiative inviting Qatari and regional journalists to experience Rwanda firsthand, shifting narratives toward innovation, tourism, and development.",
-        "tags": "Media Relations, Cultural Diplomacy, Tourism",
-        "stat_1_num": "26",
-        "stat_1_label": "Media coverages generated",
-        "stat_2_num": "6+",
-        "stat_2_label": "Major Qatari outlets"
+        "category": "Writing Samples",
+        "title": "Press Releases — Rwanda Liberation Day & Genocide Commemoration",
+        "desc": "Official press releases marking two of Rwanda's most significant national moments — drafted, placed, and published across Gulf Times, Doha News, Qatar Tribune, and The Peninsula. Each required precision in tone, cultural sensitivity, and editorial judgment appropriate for diplomatic communication.",
+        "tags": "Press Releases, Diplomatic Communication, Editorial",
+        "link": "#",
+        "link_label": "Press Clippings"
       },
       {
-        "title": "Platform Management",
-        "image": "images/img_01.png",
-        "desc": "Built an organization's entire digital presence: website, Twitter (X), LinkedIn, and Instagram, using a three-pillar strategy: authentic storytelling, cultural relevance, and data-driven content.",
-        "tags": "Social Media, Content Strategy, Analytics",
-        "stat_1_num": "500%",
-        "stat_1_label": "Reach growth",
-        "stat_2_num": "30+",
-        "stat_2_label": "Campaigns executed"
-      },
-      {
-        "title": "Editorial & Institutional Writing",
+        "category": "Writing Samples",
+        "title": "Gulf Times 8-Page Supplement — Discover Rwanda",
         "image": "images/img_03.png",
-        "desc": "Developed written content including supplements, proposals, speeches, press releases, institutional articles, and campaign content in collaboration with universities, media outlets, and partner organizations.",
-        "tags": "Writing, Editorial, Institutional Communications",
-        "stat_1_num": "20+",
-        "stat_1_label": "Press releases",
-        "stat_2_num": "12",
-        "stat_2_label": "International media coverages"
+        "desc": "Conceived and led the creation of an eight-page print and digital supplement in partnership with Gulf Times — sourcing content, shaping the editorial narrative, and designing the reader experience including interactive features. The supplement introduced Rwanda's culture, history, and people to audiences across Qatar and served as a flagship visibility piece for the Embassy.",
+        "tags": "Editorial, Print & Digital, Storytelling",
+        "link": "#",
+        "link_label": "View Supplement"
       },
       {
-        "title": "Event Photography",
-        "image": "images/img_05.jpeg",
+        "category": "Writing Samples",
+        "title": "Georgetown University Qatar — Rwanda Journey Piece",
+        "desc": "A collaborative editorial piece documenting Georgetown University Qatar's journey to Rwanda, published on the Embassy website. This piece reflects my ability to build cross-institutional partnerships and communicate complex stories for diverse, educated audiences.",
+        "tags": "Editorial, Partnerships, Higher Education",
+        "link": "#",
+        "link_label": "Read the Piece"
+      },
+      {
+        "category": "Content Creation",
+        "title": "UCI World Championship — Influencer Campaign Video",
+        "desc": "Directed and edited a social video featuring Qatari influencer Marwa during her participation in the UCI World Championship in Rwanda. I managed the creative brief, on-ground direction, and post-production — demonstrating my ability to manage influencer relationships and deliver polished, platform-ready content.",
+        "tags": "Video Production, Influencer Marketing, Social",
+        "link": "#",
+        "link_label": "Watch"
+      },
+      {
+        "category": "Content Creation",
+        "title": "Horticulture Expo 2023 — Promotional Video",
+        "desc": "Developed the script and directed the videography team for Rwanda's Horticulture Expo promotion. I translated a complex institutional message into a visually compelling story — overseeing the full production process from brief to final cut.",
+        "tags": "Video Production, Scriptwriting, Direction",
+        "link": "#",
+        "link_label": "Watch"
+      },
+      {
+        "category": "Content Creation",
+        "title": "Event & Diplomatic Photography",
         "grid_type": "photo",
-        "desc": "Visual documentation during MoU signings, high-level meetings, and diplomatic functions. I capture professional, platform-ready images that support institutional storytelling.",
-        "tags": "Visual Documentation, Photography",
-        "stat_1_num": "50+",
-        "stat_1_label": "Events covered",
-        "stat_2_num": "6+",
-        "stat_2_label": "Years of experience in Photography"
+        "desc": "Visual documentation of MoU signings, high-level meetings, and diplomatic functions across Qatar. These images were shot for institutional use across social media, press, and official communications — combining professional quality with platform-ready framing.",
+        "tags": "Photography, Events, Diplomacy",
+        "link": "#",
+        "link_label": "View Gallery"
       },
       {
-        "title": "Graphics & Visual Storytelling",
-        "image": "images/img_09.jpeg",
+        "category": "Content Creation",
+        "title": "Graphic Design & Visual Assets",
         "grid_type": "graphics",
-        "desc": "Custom graphics and visual assets using Canva and Adobe Illustrator, tailored to cultural celebrations, elections, and institutional public awareness campaigns.",
-        "tags": "Visual Design, Brand Identity",
-        "stat_1_num": "30+",
-        "stat_1_label": "Graphics per month",
-        "stat_2_num": "",
-        "stat_2_label": ""
+        "desc": "Custom graphics and visual assets created in Canva and Adobe Illustrator for cultural celebrations, national elections, and public awareness campaigns. Each piece was tailored to platform specifications, audience expectations, and brand tone.",
+        "tags": "Graphic Design, Canva, Illustrator",
+        "link": "#",
+        "link_label": "View Gallery"
       },
       {
-        "title": "Short & Long-Form Video Production",
-        "desc": "Produced short-form and long-form video content for campaigns, events, interviews, and digital storytelling across diplomatic, educational, and cultural sectors.",
-        "tags": "Video production, Reels & Social Videos",
-        "stat_1_num": "300K+ ",
-        "stat_1_label": "Combined video views",
-        "stat_2_num": "30+",
-        "stat_2_label": "Videos produced"
+        "category": "Content Creation",
+        "title": "Media Familiarization Trip — Full Campaign",
+        "image": "images/img_02.jpeg",
+        "desc": "Rwanda's story was often told through outdated lenses. I conceptualized and led a flagship media trip initiative, inviting journalists and digital creators from Al Jazeera, Doha News, Qatar Tribune, and other regional outlets to experience Rwanda firsthand. I managed the end-to-end campaign — from media selection and logistics to briefing, hosting, and follow-up — generating 26 media placements across Qatar and the Gulf that reframed Rwanda through the lens of innovation, tourism, and development.",
+        "tags": "Media Relations, Campaign Management, Cultural Diplomacy",
+        "stat_1_num": "26",
+        "stat_1_label": "Media placements",
+        "stat_2_num": "6+",
+        "stat_2_label": "Regional outlets",
+        "link": "#",
+        "link_label": "View Coverage"
+      },
+      {
+        "category": "Content Creation",
+        "title": "Crisis Communications",
+        "desc": "During a period of regional instability, I served as the round-the-clock communications focal point for Rwandan nationals in Qatar — drafting and disseminating official statements, coordinating public safety messaging, and managing real-time information flow in alignment with diplomatic protocol. This role required calm judgment under pressure, precise language, and strict coordination with leadership.",
+        "tags": "Crisis Communications, Public Safety, Diplomacy",
+        "link": "#",
+        "link_label": "View Sample"
       }
     ]
   },

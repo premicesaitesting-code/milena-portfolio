@@ -47,10 +47,6 @@ fetch('/_data/content.json')
       const photoDefaults = ['images/img_05.jpeg','images/img_06.jpeg','images/img_07.jpeg','images/img_08.jpeg'];
       const graphicDefaults = ['images/img_09.jpeg','images/img_10.jpeg','images/img_11.jpeg'];
 
-      // Separate card-type projects to wrap in a row
-      const cardProjects = data.projects.items.filter(p => p.grid_type);
-      const featureProjects = data.projects.items.filter(p => !p.grid_type);
-
       const renderStats = p => (p.stat_1_num || p.stat_2_num) ? `
         <div class="project__stats">
           ${p.stat_1_num ? `<div class="pstat"><span class="pstat__num">${p.stat_1_num}</span><span class="pstat__label">${p.stat_1_label}</span></div>` : ''}
@@ -61,7 +57,7 @@ fetch('/_data/content.json')
 
       const renderTags = p => (p.tags || '').split(',').map(t => `<span class="tag">${t.trim()}</span>`).join('');
 
-      const featureHtml = featureProjects.map((p, i) => {
+      const renderFeature = (p, i) => {
         const flipClass = i % 2 === 1 ? ' project--flip' : '';
         const imageHtml = p.image ? `
           <div class="project__image">
@@ -79,38 +75,52 @@ fetch('/_data/content.json')
               ${renderLink(p)}
             </div>
           </article>`;
+      };
+
+      const renderCard = p => {
+        let gridHtml = '';
+        if (p.grid_type === 'photo') {
+          const slots = ['event_1','event_2','event_3','event_4'];
+          gridHtml = `<div class="photo__grid">${slots.map((s, i) =>
+            `<div class="photo__cell"><img src="${imgs[s] || photoDefaults[i]}" alt="Event photo" /></div>`
+          ).join('')}</div>`;
+        } else if (p.grid_type === 'graphics') {
+          const slots = ['graphic_1','graphic_2','graphic_3'];
+          gridHtml = `<div class="graphics__grid">${slots.map((s, i) =>
+            `<div class="graphics__cell"><img src="${imgs[s] || graphicDefaults[i]}" alt="Graphic" /></div>`
+          ).join('')}</div>`;
+        }
+        return `
+          <article class="project project--card project--${p.grid_type}">
+            <div class="project__card-header">
+              <div class="project__meta-tags">${renderTags(p)}</div>
+              <h3 class="project__title">${p.title || ''}</h3>
+              <p class="project__desc">${p.desc || ''}</p>
+              ${renderStats(p)}
+              ${renderLink(p)}
+            </div>
+            ${gridHtml}
+          </article>`;
+      };
+
+      // Group projects by category, preserving first-seen order
+      const order = [];
+      const byCategory = {};
+      data.projects.items.forEach(p => {
+        const cat = p.category || '';
+        if (!(cat in byCategory)) { byCategory[cat] = []; order.push(cat); }
+        byCategory[cat].push(p);
+      });
+
+      projectsContainer.innerHTML = order.map(cat => {
+        const items = byCategory[cat];
+        const featureHtml = items.filter(p => !p.grid_type).map(renderFeature).join('');
+        const cards = items.filter(p => p.grid_type);
+        const cardHtml = cards.length ? `<div class="projects__row">${cards.map(renderCard).join('')}</div>` : '';
+        const heading = cat ? `<h3 class="projects__group-title">${cat}</h3>` : '';
+        return `<div class="projects__group">${heading}${featureHtml}${cardHtml}</div>`;
       }).join('');
 
-      const cardHtml = cardProjects.length ? `
-        <div class="projects__row">
-          ${cardProjects.map(p => {
-            let gridHtml = '';
-            if (p.grid_type === 'photo') {
-              const slots = ['event_1','event_2','event_3','event_4'];
-              gridHtml = `<div class="photo__grid">${slots.map((s, i) =>
-                `<div class="photo__cell"><img src="${imgs[s] || photoDefaults[i]}" alt="Event photo" /></div>`
-              ).join('')}</div>`;
-            } else if (p.grid_type === 'graphics') {
-              const slots = ['graphic_1','graphic_2','graphic_3'];
-              gridHtml = `<div class="graphics__grid">${slots.map((s, i) =>
-                `<div class="graphics__cell"><img src="${imgs[s] || graphicDefaults[i]}" alt="Graphic" /></div>`
-              ).join('')}</div>`;
-            }
-            return `
-              <article class="project project--card project--${p.grid_type}">
-                <div class="project__card-header">
-                  <div class="project__meta-tags">${renderTags(p)}</div>
-                  <h3 class="project__title">${p.title || ''}</h3>
-                  <p class="project__desc">${p.desc || ''}</p>
-                  ${renderStats(p)}
-                  ${renderLink(p)}
-                </div>
-                ${gridHtml}
-              </article>`;
-          }).join('')}
-        </div>` : '';
-
-      projectsContainer.innerHTML = featureHtml + cardHtml;
       projectsContainer.querySelectorAll('.project').forEach(el => {
         el.classList.add('reveal');
         observer.observe(el);

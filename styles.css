@@ -437,6 +437,25 @@ img { display: block; max-width: 100%; }
 /* ===== PROJECTS ===== */
 .projects .container { display: flex; flex-direction: column; gap: 48px; }
 
+/* Project category groups */
+.projects__group { display: flex; flex-direction: column; gap: 40px; }
+.projects__group-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.projects__group-title::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--purple), transparent);
+  opacity: .35;
+}
+
 /* Feature projects */
 .project--feature {
   display: grid;

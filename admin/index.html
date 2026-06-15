@@ -295,6 +295,10 @@
           <div class="form-section__title"><span class="dot"></span>Section intro</div>
           <div class="form-group"><label>Subtitle</label><input type="text" data-field="projects.section_sub" /></div>
         </div>
+        <datalist id="project-categories">
+          <option value="Writing Samples"></option>
+          <option value="Content Creation"></option>
+        </datalist>
         <div id="projects-list"></div>
         <button class="btn-add" onclick="addProject()">+ Add Project</button>
         <div class="form-section">
@@ -525,6 +529,7 @@
             <button class="btn-remove" onclick="removeProject(${i})">Remove</button>
           </div>
         </div>
+        <div class="form-group"><label>Section / Category <span style="font-weight:400;color:var(--light)">(projects with the same category are grouped together)</span></label><input type="text" value="${escHtml(p.category||'')}" oninput="projects[${i}].category=this.value" placeholder="e.g. Writing Samples" list="project-categories" /></div>
         <div class="form-group"><label>Title</label><input type="text" value="${escHtml(p.title||'')}" oninput="projects[${i}].title=this.value;renderProjects()" /></div>
         <div class="form-group"><label>Description</label><textarea oninput="projects[${i}].desc=this.value">${escHtml(p.desc||'')}</textarea></div>
         <div class="form-group"><label>Tags (comma-separated)</label><input type="text" value="${escHtml(p.tags||'')}" oninput="projects[${i}].tags=this.value" /></div>
@@ -545,7 +550,7 @@
   }
 
   function addProject() {
-    projects.push({ title: '', desc: '', tags: '', stat_1_num: '', stat_1_label: '', stat_2_num: '', stat_2_label: '', link: '', link_label: '' });
+    projects.push({ category: '', title: '', desc: '', tags: '', stat_1_num: '', stat_1_label: '', stat_2_num: '', stat_2_label: '', link: '', link_label: '' });
     renderProjects();
   }
 
