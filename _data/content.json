@@ -51,7 +51,8 @@
         "tags": "Video Production, Influencer Marketing, Social",
         "link": "https://www.instagram.com/p/DO1366VAqmF/",
         "link_label": "Watch",
-        "video_url": "https://www.instagram.com/p/DO1366VAqmF/"
+        "video_url": "https://www.instagram.com/p/DO1366VAqmF/",
+        "image": "/images/uploads/Screenshot_2026-06-15_at_10.37.22_PM.png"
       },
       {
         "category": "Content Creation",
@@ -60,7 +61,8 @@
         "tags": "Video Production, Scriptwriting, Direction",
         "link": "https://www.instagram.com/p/CyqdA8Gt4NL/",
         "link_label": "Watch",
-        "video_url": "https://www.instagram.com/p/CyqdA8Gt4NL/"
+        "video_url": "https://www.instagram.com/p/CyqdA8Gt4NL/",
+        "image": "/images/uploads/Screenshot_2026-06-15_at_10.09.59_PM.png"
       },
       {
         "category": "Content Creation",
@@ -77,8 +79,9 @@
         "grid_type": "graphics",
         "desc": "Custom graphics and visual assets created in Canva and Adobe Illustrator for cultural celebrations, national elections, and public awareness campaigns. Each piece was tailored to platform specifications, audience expectations, and brand tone.",
         "tags": "Graphic Design, Canva, Illustrator",
-        "link": "#",
-        "link_label": "View Gallery"
+        "link": "https://www.instagram.com/rwandaembassyinqatar/",
+        "link_label": "View Gallery",
+        "video_url": "https://www.instagram.com/rwandaembassyinqatar/"
       },
       {
         "category": "Content Creation",
@@ -90,8 +93,9 @@
         "stat_1_label": "Media placements",
         "stat_2_num": "6+",
         "stat_2_label": "Regional outlets",
-        "link": "#",
-        "link_label": "View Coverage"
+        "link": "https://www.aljazeera.net/travel/2024/11/3/%d9%85%d8%ad%d9%85%d9%8a%d8%a9-%d8%a3%d9%83%d8%a7%d8%ac%d9%8a%d8%b1%d8%a7-%d9%81%d9%8a-%d8%b1%d9%88%d8%a7%d9%86%d8%af%d8%a7-%d8%aa%d8%ac%d8%b1%d8%a8%d8%a9-%d9%81%d8%b1%d9%8a%d8%af%d8%a9",
+        "link_label": "View Coverage",
+        "video_url": "https://www.aljazeera.net/travel/2024/11/3/%d9%85%d8%ad%d9%85%d9%8a%d8%a9-%d8%a3%d9%83%d8%a7%d8%ac%d9%8a%d8%b1%d8%a7-%d9%81%d9%8a-%d8%b1%d9%88%d8%a7%d9%86%d8%af%d8%a7-%d8%aa%d8%ac%d8%b1%d8%a8%d8%a9-%d9%81%d8%b1%d9%8a%d8%af%d8%a9"
       },
       {
         "category": "CONTENT CREATION",
