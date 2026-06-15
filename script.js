@@ -119,13 +119,23 @@ fetch('/_data/content.json')
         byCategory[cat].push(p);
       });
 
-      projectsContainer.innerHTML = order.map(cat => {
+      const showGroups = order.length > 1 || (order.length === 1 && order[0]);
+      projectsContainer.innerHTML = order.map((cat, gi) => {
         const items = byCategory[cat];
         const featureHtml = items.filter(p => !p.grid_type).map(renderFeature).join('');
         const cards = items.filter(p => p.grid_type);
         const cardHtml = cards.length ? `<div class="projects__row">${cards.map(renderCard).join('')}</div>` : '';
-        const heading = cat ? `<h3 class="projects__group-title">${cat}</h3>` : '';
-        return `<div class="projects__group">${heading}${featureHtml}${cardHtml}</div>`;
+        if (!showGroups) return featureHtml + cardHtml;
+        const count = items.length;
+        const header = `
+          <div class="projects__group-head">
+            <span class="projects__group-num">${String(gi + 1).padStart(2, '0')}</span>
+            <div class="projects__group-heading">
+              <h3 class="projects__group-title">${cat}</h3>
+              <span class="projects__group-count">${count} ${count === 1 ? 'project' : 'projects'}</span>
+            </div>
+          </div>`;
+        return `<div class="projects__group">${header}<div class="projects__group-body">${featureHtml}${cardHtml}</div></div>`;
       }).join('');
 
       projectsContainer.querySelectorAll('.project').forEach(el => {
