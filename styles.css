@@ -437,49 +437,24 @@ img { display: block; max-width: 100%; }
 /* ===== PROJECTS ===== */
 .projects .container { display: flex; flex-direction: column; gap: 48px; }
 
-/* Project category groups — each reads as a distinct block */
-.projects .container { gap: 56px; }
-.projects__group {
-  padding: 40px;
-  border-radius: var(--radius-xl);
-  background: rgba(255,255,255,0.28);
-  border: 1.5px solid var(--glass-border);
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(6px);
-}
-.projects__group-head {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 36px;
-  padding-bottom: 22px;
-  border-bottom: 2px solid var(--border-light);
-}
-.projects__group-num {
-  font-family: var(--ff-serif);
-  font-size: 3rem;
-  line-height: 1;
-  flex-shrink: 0;
-  background: linear-gradient(135deg, var(--pink), var(--purple));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.projects__group-heading { display: flex; flex-direction: column; gap: 4px; }
+/* Project category groups */
+.projects__group { display: flex; flex-direction: column; gap: 40px; }
 .projects__group-title {
-  font-size: 1.9rem;
+  font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: -.01em;
-  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
-.projects__group-count {
-  font-size: .75rem;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--light);
+.projects__group-title::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--purple), transparent);
+  opacity: .35;
 }
-.projects__group-body { display: flex; flex-direction: column; gap: 40px; }
 
 /* Feature projects */
 .project--feature {
@@ -929,10 +904,6 @@ img { display: block; max-width: 100%; }
     top: 12px; left: 12px; right: 12px;
     transform: none; border-radius: 20px; padding: 0 14px;
   }
-  .projects__group { padding: 24px 20px; }
-  .projects__group-head { margin-bottom: 28px; gap: 14px; }
-  .projects__group-num { font-size: 2.2rem; }
-  .projects__group-title { font-size: 1.45rem; }
   .nav__links {
     display: none;
     position: absolute; top: calc(100% + 8px); left: 0; right: 0;
