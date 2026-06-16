@@ -8,7 +8,7 @@
     "stat_1_label": "Years of experience",
     "stat_2_num": "500%",
     "stat_2_label": "Reach growth",
-    "stat_3_num": "26",
+    "stat_3_num": "26+",
     "stat_3_label": "Media coverages"
   },
   "projects": {
@@ -220,5 +220,10 @@
     "phone": "+974 50200376",
     "linkedin": "https://www.linkedin.com/in/milena-jessy-/",
     "website": "https://milena-portfolio-sooty.vercel.app/"
+  },
+  "tools": {
+    "label": "",
+    "title": "",
+    "items": []
   }
 }
