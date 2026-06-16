@@ -45,16 +45,6 @@
         "image": "/images/uploads/GUQ.jpeg"
       },
       {
-        "category": "Content Creation",
-        "title": "Horticulture Expo 2023 - Promotional Video",
-        "desc": "Developed the script and directed the videography team for Rwanda's Horticulture Expo promotion. I translated a complex institutional message into a visually compelling story, overseeing the full production process from brief to final cut.",
-        "tags": "Video Production, Scriptwriting, Direction",
-        "link": "https://www.instagram.com/p/CyqdA8Gt4NL/",
-        "link_label": "Watch",
-        "video_url": "https://www.instagram.com/p/CyqdA8Gt4NL/",
-        "image": "/images/uploads/Screenshot_2026-06-16_at_10.18.32_AM.png"
-      },
-      {
         "category": "CONTENT CREATION",
         "title": "UCI World Championship - Influencer Campaign Video",
         "desc": "Collaborated with Qatari influencer Lulwa Al-Marri (@she.is.lulwa) to produce social media content during her participation in the UCI World Championships in Rwanda. Responsible for filming and editing a video that highlighted her experience and promoted Rwanda as a host destination to a regional audience.",
@@ -63,6 +53,16 @@
         "link_label": "Watch",
         "video_url": "https://www.instagram.com/p/DO1366VAqmF/",
         "image": "/images/uploads/Screenshot_2026-06-16_at_10.16.29_AM.png"
+      },
+      {
+        "category": "Content Creation",
+        "title": "Horticulture Expo 2023 - Promotional Video",
+        "desc": "Developed the script and directed the videography team for Rwanda's Horticulture Expo promotion. I translated a complex institutional message into a visually compelling story, overseeing the full production process from brief to final cut.",
+        "tags": "Video Production, Scriptwriting, Direction",
+        "link": "https://www.instagram.com/p/CyqdA8Gt4NL/",
+        "link_label": "Watch",
+        "video_url": "https://www.instagram.com/p/CyqdA8Gt4NL/",
+        "image": "/images/uploads/Screenshot_2026-06-16_at_10.18.32_AM.png"
       },
       {
         "category": "Content Creation",
