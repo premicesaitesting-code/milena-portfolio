@@ -37,22 +37,12 @@
       {
         "category": "Writing Samples",
         "title": "Georgetown University Qatar - Rwanda Journey Piece",
-        "desc": "A collaborative editorial piece documenting Georgetown University Qatar's journey to Rwanda, published on the Embassy website. This piece reflects my ability to build cross-institutional partnerships and communicate complex stories for diverse audiences.",
+        "desc": "A collaborative editorial piece documenting Georgetown University Qatar's journey to Rwanda, published on the Embassy website. ",
         "tags": "Editorial, Partnerships, Higher Education",
         "link": "https://www.rwandainqatar.gov.rw/actualites/info-details/gu-q-students-visit-rwanda-for-cultural-and-academic-exchange#:~:text=GU%2DQ%20Students%20Visit%20Rwanda%20for%20Cultural%20and%20Academic%20Exchange&text=Kigali%2C%20Rwanda%20%E2%80%93%20A%20group%20of,taught%20by%20Associate%20Professor%20Dr.",
         "link_label": "Read the Piece",
         "video_url": "https://www.rwandainqatar.gov.rw/actualites/info-details/gu-q-students-visit-rwanda-for-cultural-and-academic-exchange#:~:text=GU%2DQ%20Students%20Visit%20Rwanda%20for%20Cultural%20and%20Academic%20Exchange&text=Kigali%2C%20Rwanda%20%E2%80%93%20A%20group%20of,taught%20by%20Associate%20Professor%20Dr.",
         "image": "/images/uploads/GUQ.jpeg"
-      },
-      {
-        "category": "CONTENT CREATION",
-        "title": "UCI World Championship - Influencer Campaign Video",
-        "desc": "Collaborated with Qatari influencer Lulwa Al-Marri (@she.is.lulwa) to produce social media content during her participation in the UCI World Championships in Rwanda. Responsible for filming and editing a video that highlighted her experience and promoted Rwanda as a host destination to a regional audience.",
-        "tags": "Video Production, Influencer Marketing, Social",
-        "link": "https://www.instagram.com/p/DO1366VAqmF/",
-        "link_label": "Watch",
-        "video_url": "https://www.instagram.com/p/DO1366VAqmF/",
-        "image": "/images/uploads/Screenshot_2026-06-16_at_10.16.29_AM.png"
       },
       {
         "category": "Content Creation",
@@ -63,6 +53,16 @@
         "link_label": "Watch",
         "video_url": "https://www.instagram.com/p/CyqdA8Gt4NL/",
         "image": "/images/uploads/Screenshot_2026-06-16_at_10.18.32_AM.png"
+      },
+      {
+        "category": "CONTENT CREATION",
+        "title": "UCI World Championship - Influencer Campaign Video",
+        "desc": "Collaborated with Qatari influencer Lulwa Al-Marri (@she.is.lulwa) to produce social media content during her participation in the UCI World Championships in Rwanda. Responsible for filming and editing a video that highlighted her experience and promoted Rwanda as a host destination to a regional audience.",
+        "tags": "Video Production, Influencer Marketing, Social",
+        "link": "https://www.instagram.com/p/DO1366VAqmF/",
+        "link_label": "Watch",
+        "video_url": "https://www.instagram.com/p/DO1366VAqmF/",
+        "image": "/images/uploads/Screenshot_2026-06-16_at_10.16.29_AM.png"
       },
       {
         "category": "Content Creation",
