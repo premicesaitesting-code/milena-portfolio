@@ -236,9 +236,54 @@
     "website": "https://milena-portfolio-sooty.vercel.app/"
   },
   "tools": {
-    "label": "Hootsuite",
-    "title": "Hootsuite",
-    "items": []
+    "label": "Tools & Platforms",
+    "title": "Tools & Platforms",
+    "items": [
+      {
+        "name": "Adobe Premire Pro",
+        "image": "/images/uploads/Adobe_Premiere_Pro_CC_icon.svg.webp"
+      },
+      {
+        "name": "Adobe Lightroom",
+        "image": "/images/uploads/Adobe_Photoshop_Lightroom_CC_logo.svg.webp"
+      },
+      {
+        "name": "CapCut",
+        "image": "/images/uploads/capcut-icon.webp"
+      },
+      {
+        "name": "Adobe Illustrator,",
+        "image": "/images/uploads/Adobe_Illustrator-Logo.wine.svg"
+      },
+      {
+        "name": "Canva",
+        "image": "/images/uploads/images.jpeg"
+      },
+      {
+        "name": "Mailchimp",
+        "image": "/images/uploads/images__4_.jpeg"
+      },
+      {
+        "name": "Asana",
+        "image": "/images/uploads/images__2_.jpeg"
+      },
+      {
+        "name": "Agility",
+        "image": "/images/uploads/images__3_.jpeg"
+      },
+      {
+        "name": "HubSpot",
+        "image": "/images/uploads/HubSpot-Logo-2006.png"
+      },
+      {
+        "name": "DaVinci Resolve,",
+        "image": "/images/uploads/images__1_.jpeg"
+      },
+      {
+        "name": "Adobe Illustrator",
+        "image": "/images/uploads/Adobe_Illustrator-Logo.wine.svg"
+      }
+    ]
   },
   "images": {
     "graphic_3": "/images/uploads/Screenshot_2026-06-16_at_10.25.01_AM.png"
