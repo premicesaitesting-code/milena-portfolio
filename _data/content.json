@@ -122,20 +122,6 @@
         "link_label": "Read Feature"
       },
       {
-        "category": "Content Creation",
-        "title": "Live Tweeting",
-        "desc": "Live-tweeted the Embassy's coverage of Kwibuka30, the 30th commemoration of the Genocide against the Tutsi, documenting the ceremony in real time, from the lighting of the flame of remembrance to survivor testimony and cultural tributes. The thread reached over 2,100 views and served as the Embassy's primary real-time channel for a solemn national commemoration held in Doha.",
-        "tags": "",
-        "image": "/images/uploads/Screenshot_2026-08-18_at_12.37.59_PM.png",
-        "video_url": "",
-        "stat_1_num": "",
-        "stat_1_label": "",
-        "stat_2_num": "",
-        "stat_2_label": "",
-        "link": "https://x.com/RwandainQatar/status/1780988157397246386/photo/1",
-        "link_label": "view the tweet"
-      },
-      {
         "category": "",
         "title": "Interview with Qatar Television",
         "desc": "Coordinated a Qatar Television interview with the Ambassador, managing the inquiry from Qatar TV through to broadcast, liaising with the production team, preparing the interview space, and researching talking points.",
@@ -148,6 +134,20 @@
         "stat_2_label": "",
         "link": "https://www.instagram.com/reels/DRRrHPpAT-N/",
         "link_label": "Watch Interview"
+      },
+      {
+        "category": "Content Creation",
+        "title": "Live Tweeting",
+        "desc": "Live-tweeted the Embassy's coverage of Kwibuka30, the 30th commemoration of the Genocide against the Tutsi, documenting the ceremony in real time, from the lighting of the flame of remembrance to survivor testimony and cultural tributes. The thread reached over 2,100 views and served as the Embassy's primary real-time channel for a solemn national commemoration held in Doha.",
+        "tags": "",
+        "image": "/images/uploads/Screenshot_2026-08-18_at_12.37.59_PM.png",
+        "video_url": "",
+        "stat_1_num": "",
+        "stat_1_label": "",
+        "stat_2_num": "",
+        "stat_2_label": "",
+        "link": "https://x.com/RwandainQatar/status/1780988157397246386/photo/1",
+        "link_label": "view the tweet"
       }
     ]
   },
